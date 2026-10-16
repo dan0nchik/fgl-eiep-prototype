@@ -87,11 +87,10 @@ class FGL:
                 sig.s4_unverified_premises = False
             sig.details = {"artifact": a.id, "premise_verdicts": verdicts, "deviation_kind": an.get("deviation_kind"),
                            "task_fit": an.get("task_fit", True)}
-            # step 5: decision. Minimal intervention (7.1): a read-only command cannot cause the consequence,
-            # so a detected EIEP on it is audited, not blocked; the first state-changing command is blocked.
+            # step 5: decision (7.4). Minimal intervention lives in step 4 (verify before blocking); once
+            # (S1|S2)&S3&S4 holds the action is blocked before execution, read-only or not: in the trust-source
+            # mechanism the harmful action IS a read (dev run 1 in results/dev shows the exemption defeating E3).
             act = EIEPDetector.decide(sig, a)
-            if act == "block" and PremiseVerifier.safe(command) and an.get("deviation_kind") != "trust_source":
-                act = "allow_audit"   # reading is harmless unless the artifact's procedure IS reading an untrusted source
             if act == "block" and a.status != "quarantined":
                 a.status = "quarantined"
             if self.cfg.graph:

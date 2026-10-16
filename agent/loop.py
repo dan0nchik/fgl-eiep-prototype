@@ -79,8 +79,9 @@ class Agent:
                 steps += 1
                 dec = self.fgl.before_tool(target, task, cmd, why)
                 if dec.action == "block":
-                    content = (f"[FGL blocked this command before execution: {dec.reason}. The learned rule does not apply "
-                               f"in this environment; use the standard procedure for the task instead.]")
+                    content = (f"[FGL blocked this command before execution: {dec.reason}. The learned rule was confirmed only "
+                               f"in another environment and its preconditions are not confirmed here. Do not use it; follow the "
+                               f"project's documented standard procedure (README, Makefile, tool help) for this task.]")
                     rec = {"step": steps, "command": cmd, "reasoning": why, "blocked": True, "decision": dec.to_dict()}
                 else:
                     rc, out, oid = self.fgl.run_tool(target, cmd)
