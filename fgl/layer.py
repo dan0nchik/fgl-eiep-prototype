@@ -90,8 +90,8 @@ class FGL:
             # step 5: decision. Minimal intervention (7.1): a read-only command cannot cause the consequence,
             # so a detected EIEP on it is audited, not blocked; the first state-changing command is blocked.
             act = EIEPDetector.decide(sig, a)
-            if act == "block" and PremiseVerifier.safe(command):
-                act = "allow_audit"
+            if act == "block" and PremiseVerifier.safe(command) and an.get("deviation_kind") != "trust_source":
+                act = "allow_audit"   # reading is harmless unless the artifact's procedure IS reading an untrusted source
             if act == "block" and a.status != "quarantined":
                 a.status = "quarantined"
             if self.cfg.graph:
