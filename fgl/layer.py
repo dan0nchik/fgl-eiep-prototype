@@ -87,8 +87,11 @@ class FGL:
                 sig.s4_unverified_premises = False
             sig.details = {"artifact": a.id, "premise_verdicts": verdicts, "deviation_kind": an.get("deviation_kind"),
                            "task_fit": an.get("task_fit", True)}
-            # step 5: decision
+            # step 5: decision. Minimal intervention (7.1): a read-only command cannot cause the consequence,
+            # so a detected EIEP on it is audited, not blocked; the first state-changing command is blocked.
             act = EIEPDetector.decide(sig, a)
+            if act == "block" and PremiseVerifier.safe(command):
+                act = "allow_audit"
             if act == "block" and a.status != "quarantined":
                 a.status = "quarantined"
             if self.cfg.graph:
@@ -96,7 +99,8 @@ class FGL:
             if worst is None or sig.risk > worst.risk:
                 worst, action = sig, act
                 reason = f"artifact {a.name}: " + ("EIEP: (S1|S2)&S3&S4" if act == "block" else
-                                                   "crossing with confirmed premises" if act == "allow_audit" else "within scope")
+                                                   ("EIEP signals on a read-only command, audited" if sig.eiep else "crossing with confirmed premises")
+                                                   if act == "allow_audit" else "within scope")
         if attributed and not an.get("task_fit", True) and action != "block":
             action, reason = "allow_audit", reason + "; command does not fit the task"
         d = Decision(action, reason, worst, [a.id for a in attributed], probes, (time.time() - t0) * 1000)

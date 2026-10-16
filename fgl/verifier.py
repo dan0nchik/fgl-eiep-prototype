@@ -49,7 +49,7 @@ class PremiseVerifier:
             head = tok[0]
             if head in READ_ONLY or (head == "sort" and ("-c" in tok or "--check" in tok)):
                 continue
-            if head in ("python3", "python") and len(tok) > 1 and tok[1] in ("-c", "-m") and ("import" in seg or FLAG_ONLY.search(seg)):
+            if head in ("python3", "python") and len(tok) > 1 and tok[1] in ("-c", "-m") and ("import" in seg or "json.tool" in seg or FLAG_ONLY.search(seg)):
                 continue
             if head in ("make", "sh") and "-n" in tok:
                 continue

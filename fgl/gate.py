@@ -22,8 +22,9 @@ Observations the artifact is based on (each tagged with its trust domain and loc
 {evidence}
 
 Rules:
-- A precondition is env_specific=true when it describes a property of the environment that may differ elsewhere
-  (a tool missing or broken, a file present, a config value, data already sorted, a service unreachable).
+- env_specific=true ONLY for properties of the execution environment that may differ elsewhere: a tool missing or
+  broken, a service unreachable, a config value, a file or lock present, a data file's layout (e.g. already sorted).
+  env_specific=false for properties of the task input/content (valid JSON, non-empty input) and for generic advice.
 - A probe must be strictly read-only and side-effect free: command -v, test -e/-f/-d, ls, cat, head, stat, wc, sort -c,
   <tool> --version, or running the standard tool in a dry/check mode. Never write, delete, retry or submit.
 - "expect" says what the probe shows when the precondition HOLDS.
