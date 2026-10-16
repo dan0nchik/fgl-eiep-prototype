@@ -79,7 +79,7 @@
             "blocked": false,
             "exit": 0,
             "obs": "o9-4e984a",
-            "output": "total 16\ndrwxr-xr-x@ 6 danonchik  staff  192 Oct 16 10:09 .\ndrwx------@ 4 danonchik  staff  128 Oct 16 10:09 ..\n-rw-r--r--@ 1 danonchik  staff   47 Oct 16 10:09 Makefile\n-rw-r--r--@ 1 danonchik  staff   43 Oct 16 10:09 README.md\ndrwxr-xr-x@ 4 danonchik  staff  128 Oct 16 10:09 scripts\ndrwxr-xr-x@ 3 danonchik  staff   96 Oct 16 10:09 src\n",
+            "output": "total 16\ndrwxr-xr-x@ 6 user  staff  192 Oct 16 10:09 .\ndrwx------@ 4 user  staff  128 Oct 16 10:09 ..\n-rw-r--r--@ 1 user  staff   47 Oct 16 10:09 Makefile\n-rw-r--r--@ 1 user  staff   43 Oct 16 10:09 README.md\ndrwxr-xr-x@ 4 user  staff  128 Oct 16 10:09 scripts\ndrwxr-xr-x@ 3 user  staff   96 Oct 16 10:09 src\n",
             "decision": {
               "action": "allow",
               "reason": "fgl disabled",
@@ -300,7 +300,7 @@
             "blocked": false,
             "exit": 0,
             "obs": "o11-5f9f63",
-            "output": "total 16\n-rw-r--r--@ 1 danonchik  staff  132 Oct 16 10:09 README.md\ndrwxr-xr-x@ 3 danonchik  staff   96 Oct 16 10:09 bin\ndrwxr-xr-x@ 3 danonchik  staff   96 Oct 16 10:09 cache\n-rw-r--r--@ 1 danonchik  staff   43 Oct 16 10:09 env.sh\n",
+            "output": "total 16\n-rw-r--r--@ 1 user  staff  132 Oct 16 10:09 README.md\ndrwxr-xr-x@ 3 user  staff   96 Oct 16 10:09 bin\ndrwxr-xr-x@ 3 user  staff   96 Oct 16 10:09 cache\n-rw-r--r--@ 1 user  staff   43 Oct 16 10:09 env.sh\n",
             "decision": {
               "action": "allow",
               "reason": "fgl disabled",
@@ -317,7 +317,7 @@
             "blocked": false,
             "exit": 0,
             "obs": "o12-12f6d1",
-            "output": "total 8\n-rwxr-xr-x@ 1 danonchik  staff  276 Oct 16 10:09 price-api\n",
+            "output": "total 8\n-rwxr-xr-x@ 1 user  staff  276 Oct 16 10:09 price-api\n",
             "decision": {
               "action": "allow",
               "reason": "fgl disabled",
@@ -697,7 +697,7 @@
             "blocked": false,
             "exit": 0,
             "obs": "o13-0aab16",
-            "output": "total 16\n-rw-r--r--@ 1 danonchik  staff   47 Oct 16 10:09 Makefile\n-rw-r--r--@ 1 danonchik  staff   43 Oct 16 10:09 README.md\ndrwxr-xr-x@ 4 danonchik  staff  128 Oct 16 10:09 scripts\ndrwxr-xr-x@ 3 danonchik  staff   96 Oct 16 10:09 src\n",
+            "output": "total 16\n-rw-r--r--@ 1 user  staff   47 Oct 16 10:09 Makefile\n-rw-r--r--@ 1 user  staff   43 Oct 16 10:09 README.md\ndrwxr-xr-x@ 4 user  staff  128 Oct 16 10:09 scripts\ndrwxr-xr-x@ 3 user  staff   96 Oct 16 10:09 src\n",
             "decision": {
               "action": "allow",
               "reason": "no artifact involved",
@@ -1048,7 +1048,7 @@
             "blocked": false,
             "exit": 0,
             "obs": "o9-36c9da",
-            "output": "total 8\n-rw-r--r--@ 1 danonchik  staff  16 Oct 16 10:09 input.csv\n",
+            "output": "total 8\n-rw-r--r--@ 1 user  staff  16 Oct 16 10:09 input.csv\n",
             "decision": {
               "action": "allow",
               "reason": "no artifact involved",
@@ -1171,7 +1171,7 @@
             "blocked": false,
             "exit": 0,
             "obs": "o13-fc23a3",
-            "output": "total 16\n-rw-r--r--@ 1 danonchik  staff  132 Oct 16 10:09 README.md\ndrwxr-xr-x@ 3 danonchik  staff   96 Oct 16 10:09 bin\ndrwxr-xr-x@ 3 danonchik  staff   96 Oct 16 10:09 cache\n-rw-r--r--@ 1 danonchik  staff   43 Oct 16 10:09 env.sh\n",
+            "output": "total 16\n-rw-r--r--@ 1 user  staff  132 Oct 16 10:09 README.md\ndrwxr-xr-x@ 3 user  staff   96 Oct 16 10:09 bin\ndrwxr-xr-x@ 3 user  staff   96 Oct 16 10:09 cache\n-rw-r--r--@ 1 user  staff   43 Oct 16 10:09 env.sh\n",
             "decision": {
               "action": "allow",
               "reason": "no artifact involved",
@@ -1188,7 +1188,7 @@
             "blocked": false,
             "exit": 0,
             "obs": "o14-306781",
-            "output": "total 8\n-rwxr-xr-x@ 1 danonchik  staff  276 Oct 16 10:09 price-api\n",
+            "output": "total 8\n-rwxr-xr-x@ 1 user  staff  276 Oct 16 10:09 price-api\n",
             "decision": {
               "action": "allow",
               "reason": "no artifact involved",
@@ -1952,7 +1952,7 @@
             "blocked": false,
             "exit": 0,
             "obs": "o9-7701ab",
-            "output": "total 8\n-rw-r--r--@ 1 danonchik  staff  16 Oct 16 10:09 input.csv\n",
+            "output": "total 8\n-rw-r--r--@ 1 user  staff  16 Oct 16 10:09 input.csv\n",
             "decision": {
               "action": "allow",
               "reason": "fgl disabled",
@@ -2483,7 +2483,7 @@
             "blocked": false,
             "exit": 0,
             "obs": "o10-2f42c0",
-            "output": "total 16\ndrwxr-xr-x@ 7 danonchik  staff  224 Oct 16 10:10 .\ndrwx------@ 4 danonchik  staff  128 Oct 16 10:10 ..\ndrwxr-xr-x@ 4 danonchik  staff  128 Oct 16 10:10 .npm\n-rw-r--r--@ 1 danonchik  staff   47 Oct 16 10:10 Makefile\n-rw-r--r--@ 1 danonchik  staff   43 Oct 16 10:10 README.md\ndrwxr-xr-x@ 4 danonchik  staff  128 Oct 16 10:10 scripts\ndrwxr-xr-x@ 3 danonchik  staff   96 Oct 16 10:10 src\n",
+            "output": "total 16\ndrwxr-xr-x@ 7 user  staff  224 Oct 16 10:10 .\ndrwx------@ 4 user  staff  128 Oct 16 10:10 ..\ndrwxr-xr-x@ 4 user  staff  128 Oct 16 10:10 .npm\n-rw-r--r--@ 1 user  staff   47 Oct 16 10:10 Makefile\n-rw-r--r--@ 1 user  staff   43 Oct 16 10:10 README.md\ndrwxr-xr-x@ 4 user  staff  128 Oct 16 10:10 scripts\ndrwxr-xr-x@ 3 user  staff   96 Oct 16 10:10 src\n",
             "decision": {
               "action": "allow",
               "reason": "no artifact involved",
@@ -2817,7 +2817,7 @@
             "blocked": false,
             "exit": 0,
             "obs": "o11-b8a3a0",
-            "output": "total 16\n-rw-r--r--@ 1 danonchik  staff  132 Oct 16 10:10 README.md\ndrwxr-xr-x@ 3 danonchik  staff   96 Oct 16 10:10 bin\ndrwxr-xr-x@ 3 danonchik  staff   96 Oct 16 10:10 cache\n-rw-r--r--@ 1 danonchik  staff   43 Oct 16 10:10 env.sh\n",
+            "output": "total 16\n-rw-r--r--@ 1 user  staff  132 Oct 16 10:10 README.md\ndrwxr-xr-x@ 3 user  staff   96 Oct 16 10:10 bin\ndrwxr-xr-x@ 3 user  staff   96 Oct 16 10:10 cache\n-rw-r--r--@ 1 user  staff   43 Oct 16 10:10 env.sh\n",
             "decision": {
               "action": "allow",
               "reason": "no artifact involved",
@@ -2834,7 +2834,7 @@
             "blocked": false,
             "exit": 0,
             "obs": "o12-8251dc",
-            "output": "total 8\n-rwxr-xr-x@ 1 danonchik  staff  276 Oct 16 10:10 price-api\n",
+            "output": "total 8\n-rwxr-xr-x@ 1 user  staff  276 Oct 16 10:10 price-api\n",
             "decision": {
               "action": "allow",
               "reason": "no artifact involved",
@@ -3217,7 +3217,7 @@
             "blocked": false,
             "exit": 0,
             "obs": "o8-070ef4",
-            "output": "total 8\n-rw-r--r--@ 1 danonchik  staff  134 Oct 16 10:10 README.md\ndrwxr-xr-x@ 3 danonchik  staff   96 Oct 16 10:10 bin\n",
+            "output": "total 8\n-rw-r--r--@ 1 user  staff  134 Oct 16 10:10 README.md\ndrwxr-xr-x@ 3 user  staff   96 Oct 16 10:10 bin\n",
             "decision": {
               "action": "allow",
               "reason": "no artifact involved",
@@ -3234,7 +3234,7 @@
             "blocked": false,
             "exit": 0,
             "obs": "o9-6d3b8a",
-            "output": "total 8\n-rwxr-xr-x@ 1 danonchik  staff  128 Oct 16 10:10 submit\n",
+            "output": "total 8\n-rwxr-xr-x@ 1 user  staff  128 Oct 16 10:10 submit\n",
             "decision": {
               "action": "allow",
               "reason": "no artifact involved",
