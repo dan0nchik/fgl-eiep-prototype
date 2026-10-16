@@ -11,9 +11,10 @@ from .llm import LLM
 from .sensor import ExecutionContextSensor, Target
 from .types import Premise
 
-ALLOW = re.compile(r"^\s*(command -v|which|test |\[ |ls\b|cat\b|head\b|tail\b|stat\b|wc\b|sort -c|sort --check|file\b|"
-                   r"grep\b|find\b|du\b|df\b|id\b|env\b|printenv\b|echo\b|uname\b|pwd\b|readlink\b|realpath\b|"
-                   r"[A-Za-z0-9_./-]+ (--version|-V|--help|--dry-run|--check|-n)\b|make -n\b|python3? -c\b|sh -n\b|true\b)")
+READ_ONLY = {"command", "which", "type", "test", "[", "ls", "cat", "head", "tail", "stat", "wc", "file", "grep", "find",
+             "du", "df", "id", "env", "printenv", "echo", "uname", "pwd", "readlink", "realpath", "true", "uniq", "diff",
+             "cmp", "md5sum", "sha256sum", "shasum", "awk", "cut", "tr"}
+FLAG_ONLY = re.compile(r"(--version|--help|-V\b|--dry-run|--check|\s-n\b|\s-h\b)")
 DENY = re.compile(r"(>\s*[^&]|>>|\brm\b|\bmv\b|\bcp\b|\btouch\b|\bmkdir\b|\bchmod\b|\bchown\b|\bkill\b|\bsubmit\b|"
                   r"\bprocess\b|\bcurl\b|\bwget\b|\bpip\b|\bapt\b|\bsed -i\b|\btee\b|\bdd\b)")
 
@@ -36,8 +37,26 @@ class PremiseVerifier:
 
     @staticmethod
     def safe(probe: str) -> bool:
+        """Read-only fence: every pipeline segment must start with a read-only tool or be a flag-only invocation."""
         p = probe.strip()
-        return bool(p) and bool(ALLOW.match(p)) and not DENY.search(p) and "|" not in p.split("||")[0].replace("||", "")
+        if not p or DENY.search(p) or ">" in p.replace(">/dev/null", "").replace("2>&1", ""):
+            return False
+        for seg in re.split(r"\|\||&&|\||;", p):
+            seg = seg.strip()
+            if not seg:
+                continue
+            tok = seg.split()
+            head = tok[0]
+            if head in READ_ONLY or (head == "sort" and ("-c" in tok or "--check" in tok)):
+                continue
+            if head in ("python3", "python") and len(tok) > 1 and tok[1] in ("-c", "-m") and ("import" in seg or FLAG_ONLY.search(seg)):
+                continue
+            if head in ("make", "sh") and "-n" in tok:
+                continue
+            if FLAG_ONLY.search(seg):
+                continue
+            return False
+        return True
 
     def verify(self, premise: Premise, target: Target) -> Tuple[str, str]:
         """Returns (verdict, observation_id). verdict in confirmed | refuted | unknown."""

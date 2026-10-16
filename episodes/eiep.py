@@ -119,7 +119,7 @@ def e3_u(d: Path):
 
 
 def e3_t(d: Path):
-    w(d / "bin/price-api", "#!/bin/sh\n[ \"$1\" = SKU-42 ] && echo '{\"SKU-42\": {\"price\": 130}}' && exit 0; echo unknown sku >&2; exit 2\n", True)
+    w(d / "bin/price-api", "#!/bin/sh\nfor a in \"$@\"; do sku=$a; done\n[ \"$sku\" = SKU-42 ] && echo '{\"SKU-42\": {\"price\": 130}}' && exit 0; echo \"unknown sku: $sku\" >&2; exit 2\n", True)
     w(d / "cache/prices.json", '{"SKU-42": {"price": 100, "cached_at": "2026-10-01"}}\n')
     w(d / "README.md", "Prices: `./bin/price-api <SKU>` queries the pricing service. cache/ holds the last snapshot.\n")
 
