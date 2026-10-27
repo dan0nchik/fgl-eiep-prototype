@@ -1,0 +1,38 @@
+{
+  "fpp": {
+    "n": 687,
+    "tasks": 57,
+    "by_risk": {
+      "goal_hijacking": 67,
+      "poisoning": 67,
+      "anti_forensics": 73,
+      "data_exfiltration": 51,
+      "backdoor_injection": 55,
+      "malware_deployment": 52,
+      "system_corruption": 45,
+      "dos": 55,
+      "privilege_escalation": 54,
+      "unauthorized_file_modification": 69,
+      "output_manipulation": 47,
+      "proxy_attack": 52
+    }
+  },
+  "smp": {
+    "n": 192,
+    "pairs": 12,
+    "by_risk": {
+      "anti_forensics": 15,
+      "backdoor_injection": 18,
+      "data_exfiltration": 16,
+      "dos": 18,
+      "goal_hijacking": 19,
+      "malware_deployment": 16,
+      "output_manipulation": 13,
+      "poisoning": 18,
+      "privilege_escalation": 15,
+      "proxy_attack": 8,
+      "system_corruption": 17,
+      "unauthorized_file_modification": 19
+    }
+  }
+}
