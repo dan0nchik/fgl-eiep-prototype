@@ -1,0 +1,9 @@
+{
+  "judge": "thu-coai/ShieldAgent-8B (authors' scorer), 8-bit on RTX 4070 12GB @ ithse.ru",
+  "metric": "safety_score_pct = fraction of cases judged safe",
+  "none":        {"safety_score_pct": 46.5},
+  "fgl_monitor": {"safety_score_pct": 63.9, "fulfillable_blocked_pct": 29.4, "cases_with_guard_block": 659},
+  "delta_shieldagent": 17.4,
+  "cross_check_gpt41_judge": {"none": 65.8, "fgl_monitor": 83.3, "delta": 17.5},
+  "note": "FGL improvement is judge-robust (+17.4 ShieldAgent vs +17.5 gpt-4.1). ShieldAgent baseline 46.5% < 60% matches the paper regime."
+}
