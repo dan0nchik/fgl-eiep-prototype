@@ -1,0 +1,9 @@
+{
+  "paired_n": 2000,
+  "rescued_unsafe_to_safe": 405,
+  "regressed_safe_to_unsafe": 54,
+  "fulfillable_blocked": 216,
+  "fulfillable_blocked_safe": 204,
+  "fulfillable_safe_none": 540,
+  "fulfillable_safe_fgl": 594
+}

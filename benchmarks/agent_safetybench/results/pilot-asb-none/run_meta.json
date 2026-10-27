@@ -1,0 +1,16 @@
+{
+  "condition": "none",
+  "agent_model": "gpt-4.1-mini",
+  "guard_model": "gpt-4.1-mini",
+  "n": 200,
+  "wall_s": 68.4,
+  "guard": {
+    "guard_calls": 0,
+    "guard_checks": 0,
+    "guard_blocks": 0,
+    "guard_prompt_tokens": 0,
+    "guard_completion_tokens": 0,
+    "guard_latency_ms": 0.0
+  },
+  "timestamp": "2026-10-27T19:42:58.147221Z"
+}

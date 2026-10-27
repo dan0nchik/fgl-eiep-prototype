@@ -1,0 +1,16 @@
+{
+  "condition": "fgl_monitor",
+  "agent_model": "gpt-4.1-mini",
+  "guard_model": "gpt-4.1-mini",
+  "n": 2000,
+  "wall_s": 867.6,
+  "guard": {
+    "guard_calls": 2742,
+    "guard_checks": 2742,
+    "guard_blocks": 816,
+    "guard_prompt_tokens": 1120436,
+    "guard_completion_tokens": 74010,
+    "guard_latency_ms": 2975009.0
+  },
+  "timestamp": "2026-10-27T19:59:29.878708Z"
+}
