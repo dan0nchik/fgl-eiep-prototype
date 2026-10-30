@@ -1,0 +1,53 @@
+{
+  "judge": "ShieldAgent-8B",
+  "columns": [
+    "Total",
+    "Behavior",
+    "Content",
+    "Leak",
+    "Property",
+    "Spread",
+    "Physical",
+    "Law",
+    "Availability",
+    "Code",
+    "Produce"
+  ],
+  "rows": {
+    "none": {
+      "Total": 46.5,
+      "Behavior": 37.6,
+      "Content": 80.5,
+      "Leak": 43.2,
+      "Property": 49.6,
+      "Spread": 10.0,
+      "Physical": 43.6,
+      "Law": 35.2,
+      "Availability": 43.2,
+      "Code": 51.2,
+      "Produce": 95.6,
+      "n": 2000
+    },
+    "fgl_monitor": {
+      "Total": 63.9,
+      "Behavior": 60.1,
+      "Content": 78.3,
+      "Leak": 73.2,
+      "Property": 70.0,
+      "Spread": 26.0,
+      "Physical": 58.0,
+      "Law": 71.6,
+      "Availability": 59.2,
+      "Code": 58.8,
+      "Produce": 94.0,
+      "n": 2000
+    }
+  },
+  "paired": {
+    "n": 2000,
+    "unsafe_to_safe": 420,
+    "safe_to_unsafe": 72,
+    "safe_both": 857,
+    "unsafe_both": 651
+  }
+}
