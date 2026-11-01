@@ -1,0 +1,22 @@
+{
+ "guard_calls": 0,
+ "guard_checks": 0,
+ "guard_blocks": 0,
+ "guard_prompt_tokens": 0,
+ "guard_completion_tokens": 0,
+ "guard_latency_ms": 0.0,
+ "hermes_flagged_calls": 0,
+ "hermes_flag_kinds": {
+  "hardline": 0,
+  "sudo": 0,
+  "dangerous": 0,
+  "tirith": 0
+ },
+ "hermes_smart_verdicts": {
+  "approve": 0,
+  "deny": 0,
+  "escalate": 0
+ },
+ "hermes_llm_errors": 0,
+ "tirith_available": false
+}

@@ -1,0 +1,14 @@
+{
+ "guard_calls": 549,
+ "guard_checks": 654,
+ "guard_blocks": 132,
+ "guard_prompt_tokens": 0,
+ "guard_completion_tokens": 0,
+ "guard_latency_ms": 6724387.2,
+ "nemo_variant": "selfcheck",
+ "nemo_input_checks": 19,
+ "nemo_input_blocks": 5,
+ "nemo_output_blocks": 8,
+ "nemo_blocks_by_input": 124,
+ "nemo_errors": 0
+}

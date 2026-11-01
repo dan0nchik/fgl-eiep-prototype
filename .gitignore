@@ -4,3 +4,6 @@ __pycache__/
 *.env
 results/full_run.log
 benchmarks/agent_safetybench/results/*.log
+benchmarks/skillharm/trajectories/
+benchmarks/autoskillharm/trajectories/*/*.json
+benchmarks/skillharm/offline_monitors/results/*.jsonl

@@ -1,0 +1,8 @@
+{
+ "guard_calls": 9,
+ "guard_checks": 9,
+ "guard_blocks": 3,
+ "guard_prompt_tokens": 0,
+ "guard_completion_tokens": 0,
+ "guard_latency_ms": 67487.4
+}

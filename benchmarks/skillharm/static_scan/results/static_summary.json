@@ -1,0 +1,1128 @@
+{
+ "hermes": {
+  "overall": {
+   "n": 879,
+   "blocked": 165,
+   "blocked_pct": 18.8,
+   "attributable": 70,
+   "attributable_pct": 8.0,
+   "attributable_content": 70,
+   "attributable_content_pct": 8.0,
+   "n_on_clean_allowed_skill": 767,
+   "blocked_on_clean_allowed_skill": 60,
+   "blocked_on_clean_allowed_skill_pct": 7.8,
+   "agent_created_ask": 53,
+   "agent_created_ask_pct": 6.0
+  },
+  "by_scenario": {
+   "FPP": {
+    "n": 687,
+    "blocked": 111,
+    "blocked_pct": 16.2,
+    "attributable": 54,
+    "attributable_pct": 7.9,
+    "attributable_content": 54,
+    "attributable_content_pct": 7.9,
+    "n_on_clean_allowed_skill": 616,
+    "blocked_on_clean_allowed_skill": 47,
+    "blocked_on_clean_allowed_skill_pct": 7.6,
+    "agent_created_ask": 51,
+    "agent_created_ask_pct": 7.4
+   },
+   "SMP": {
+    "n": 192,
+    "blocked": 54,
+    "blocked_pct": 28.1,
+    "attributable": 16,
+    "attributable_pct": 8.3,
+    "attributable_content": 16,
+    "attributable_content_pct": 8.3,
+    "n_on_clean_allowed_skill": 151,
+    "blocked_on_clean_allowed_skill": 13,
+    "blocked_on_clean_allowed_skill_pct": 8.6,
+    "agent_created_ask": 2,
+    "agent_created_ask_pct": 1.0
+   }
+  },
+  "by_risk_id": {
+   "('FPP', 'anti_forensics')": {
+    "n": 73,
+    "blocked": 5,
+    "blocked_pct": 6.8,
+    "attributable": 1,
+    "attributable_pct": 1.4,
+    "attributable_content": 1,
+    "attributable_content_pct": 1.4,
+    "n_on_clean_allowed_skill": 69,
+    "blocked_on_clean_allowed_skill": 1,
+    "blocked_on_clean_allowed_skill_pct": 1.4,
+    "agent_created_ask": 0,
+    "agent_created_ask_pct": 0.0
+   },
+   "('FPP', 'backdoor_injection')": {
+    "n": 55,
+    "blocked": 22,
+    "blocked_pct": 40.0,
+    "attributable": 14,
+    "attributable_pct": 25.5,
+    "attributable_content": 14,
+    "attributable_content_pct": 25.5,
+    "n_on_clean_allowed_skill": 47,
+    "blocked_on_clean_allowed_skill": 14,
+    "blocked_on_clean_allowed_skill_pct": 29.8,
+    "agent_created_ask": 13,
+    "agent_created_ask_pct": 23.6
+   },
+   "('FPP', 'data_exfiltration')": {
+    "n": 51,
+    "blocked": 11,
+    "blocked_pct": 21.6,
+    "attributable": 4,
+    "attributable_pct": 7.8,
+    "attributable_content": 4,
+    "attributable_content_pct": 7.8,
+    "n_on_clean_allowed_skill": 44,
+    "blocked_on_clean_allowed_skill": 4,
+    "blocked_on_clean_allowed_skill_pct": 9.1,
+    "agent_created_ask": 0,
+    "agent_created_ask_pct": 0.0
+   },
+   "('FPP', 'dos')": {
+    "n": 55,
+    "blocked": 9,
+    "blocked_pct": 16.4,
+    "attributable": 7,
+    "attributable_pct": 12.7,
+    "attributable_content": 7,
+    "attributable_content_pct": 12.7,
+    "n_on_clean_allowed_skill": 53,
+    "blocked_on_clean_allowed_skill": 7,
+    "blocked_on_clean_allowed_skill_pct": 13.2,
+    "agent_created_ask": 7,
+    "agent_created_ask_pct": 12.7
+   },
+   "('FPP', 'goal_hijacking')": {
+    "n": 67,
+    "blocked": 9,
+    "blocked_pct": 13.4,
+    "attributable": 4,
+    "attributable_pct": 6.0,
+    "attributable_content": 4,
+    "attributable_content_pct": 6.0,
+    "n_on_clean_allowed_skill": 60,
+    "blocked_on_clean_allowed_skill": 3,
+    "blocked_on_clean_allowed_skill_pct": 5.0,
+    "agent_created_ask": 6,
+    "agent_created_ask_pct": 9.0
+   },
+   "('FPP', 'malware_deployment')": {
+    "n": 52,
+    "blocked": 2,
+    "blocked_pct": 3.8,
+    "attributable": 0,
+    "attributable_pct": 0.0,
+    "attributable_content": 0,
+    "attributable_content_pct": 0.0,
+    "n_on_clean_allowed_skill": 50,
+    "blocked_on_clean_allowed_skill": 0,
+    "blocked_on_clean_allowed_skill_pct": 0.0,
+    "agent_created_ask": 0,
+    "agent_created_ask_pct": 0.0
+   },
+   "('FPP', 'output_manipulation')": {
+    "n": 47,
+    "blocked": 8,
+    "blocked_pct": 17.0,
+    "attributable": 5,
+    "attributable_pct": 10.6,
+    "attributable_content": 5,
+    "attributable_content_pct": 10.6,
+    "n_on_clean_allowed_skill": 39,
+    "blocked_on_clean_allowed_skill": 0,
+    "blocked_on_clean_allowed_skill_pct": 0.0,
+    "agent_created_ask": 2,
+    "agent_created_ask_pct": 4.3
+   },
+   "('FPP', 'poisoning')": {
+    "n": 67,
+    "blocked": 7,
+    "blocked_pct": 10.4,
+    "attributable": 0,
+    "attributable_pct": 0.0,
+    "attributable_content": 0,
+    "attributable_content_pct": 0.0,
+    "n_on_clean_allowed_skill": 60,
+    "blocked_on_clean_allowed_skill": 0,
+    "blocked_on_clean_allowed_skill_pct": 0.0,
+    "agent_created_ask": 1,
+    "agent_created_ask_pct": 1.5
+   },
+   "('FPP', 'privilege_escalation')": {
+    "n": 54,
+    "blocked": 6,
+    "blocked_pct": 11.1,
+    "attributable": 3,
+    "attributable_pct": 5.6,
+    "attributable_content": 3,
+    "attributable_content_pct": 5.6,
+    "n_on_clean_allowed_skill": 51,
+    "blocked_on_clean_allowed_skill": 3,
+    "blocked_on_clean_allowed_skill_pct": 5.9,
+    "agent_created_ask": 0,
+    "agent_created_ask_pct": 0.0
+   },
+   "('FPP', 'proxy_attack')": {
+    "n": 52,
+    "blocked": 12,
+    "blocked_pct": 23.1,
+    "attributable": 3,
+    "attributable_pct": 5.8,
+    "attributable_content": 3,
+    "attributable_content_pct": 5.8,
+    "n_on_clean_allowed_skill": 41,
+    "blocked_on_clean_allowed_skill": 3,
+    "blocked_on_clean_allowed_skill_pct": 7.3,
+    "agent_created_ask": 6,
+    "agent_created_ask_pct": 11.5
+   },
+   "('FPP', 'system_corruption')": {
+    "n": 45,
+    "blocked": 10,
+    "blocked_pct": 22.2,
+    "attributable": 10,
+    "attributable_pct": 22.2,
+    "attributable_content": 10,
+    "attributable_content_pct": 22.2,
+    "n_on_clean_allowed_skill": 45,
+    "blocked_on_clean_allowed_skill": 10,
+    "blocked_on_clean_allowed_skill_pct": 22.2,
+    "agent_created_ask": 10,
+    "agent_created_ask_pct": 22.2
+   },
+   "('FPP', 'unauthorized_file_modification')": {
+    "n": 69,
+    "blocked": 10,
+    "blocked_pct": 14.5,
+    "attributable": 3,
+    "attributable_pct": 4.3,
+    "attributable_content": 3,
+    "attributable_content_pct": 4.3,
+    "n_on_clean_allowed_skill": 57,
+    "blocked_on_clean_allowed_skill": 2,
+    "blocked_on_clean_allowed_skill_pct": 3.5,
+    "agent_created_ask": 6,
+    "agent_created_ask_pct": 8.7
+   },
+   "('SMP', 'anti_forensics')": {
+    "n": 15,
+    "blocked": 3,
+    "blocked_pct": 20.0,
+    "attributable": 1,
+    "attributable_pct": 6.7,
+    "attributable_content": 1,
+    "attributable_content_pct": 6.7,
+    "n_on_clean_allowed_skill": 13,
+    "blocked_on_clean_allowed_skill": 1,
+    "blocked_on_clean_allowed_skill_pct": 7.7,
+    "agent_created_ask": 0,
+    "agent_created_ask_pct": 0.0
+   },
+   "('SMP', 'backdoor_injection')": {
+    "n": 18,
+    "blocked": 10,
+    "blocked_pct": 55.6,
+    "attributable": 8,
+    "attributable_pct": 44.4,
+    "attributable_content": 8,
+    "attributable_content_pct": 44.4,
+    "n_on_clean_allowed_skill": 14,
+    "blocked_on_clean_allowed_skill": 6,
+    "blocked_on_clean_allowed_skill_pct": 42.9,
+    "agent_created_ask": 1,
+    "agent_created_ask_pct": 5.6
+   },
+   "('SMP', 'data_exfiltration')": {
+    "n": 16,
+    "blocked": 4,
+    "blocked_pct": 25.0,
+    "attributable": 1,
+    "attributable_pct": 6.2,
+    "attributable_content": 1,
+    "attributable_content_pct": 6.2,
+    "n_on_clean_allowed_skill": 13,
+    "blocked_on_clean_allowed_skill": 1,
+    "blocked_on_clean_allowed_skill_pct": 7.7,
+    "agent_created_ask": 0,
+    "agent_created_ask_pct": 0.0
+   },
+   "('SMP', 'dos')": {
+    "n": 18,
+    "blocked": 3,
+    "blocked_pct": 16.7,
+    "attributable": 1,
+    "attributable_pct": 5.6,
+    "attributable_content": 1,
+    "attributable_content_pct": 5.6,
+    "n_on_clean_allowed_skill": 16,
+    "blocked_on_clean_allowed_skill": 1,
+    "blocked_on_clean_allowed_skill_pct": 6.2,
+    "agent_created_ask": 0,
+    "agent_created_ask_pct": 0.0
+   },
+   "('SMP', 'goal_hijacking')": {
+    "n": 19,
+    "blocked": 4,
+    "blocked_pct": 21.1,
+    "attributable": 0,
+    "attributable_pct": 0.0,
+    "attributable_content": 0,
+    "attributable_content_pct": 0.0,
+    "n_on_clean_allowed_skill": 15,
+    "blocked_on_clean_allowed_skill": 0,
+    "blocked_on_clean_allowed_skill_pct": 0.0,
+    "agent_created_ask": 0,
+    "agent_created_ask_pct": 0.0
+   },
+   "('SMP', 'malware_deployment')": {
+    "n": 16,
+    "blocked": 4,
+    "blocked_pct": 25.0,
+    "attributable": 0,
+    "attributable_pct": 0.0,
+    "attributable_content": 0,
+    "attributable_content_pct": 0.0,
+    "n_on_clean_allowed_skill": 12,
+    "blocked_on_clean_allowed_skill": 0,
+    "blocked_on_clean_allowed_skill_pct": 0.0,
+    "agent_created_ask": 0,
+    "agent_created_ask_pct": 0.0
+   },
+   "('SMP', 'output_manipulation')": {
+    "n": 13,
+    "blocked": 4,
+    "blocked_pct": 30.8,
+    "attributable": 0,
+    "attributable_pct": 0.0,
+    "attributable_content": 0,
+    "attributable_content_pct": 0.0,
+    "n_on_clean_allowed_skill": 9,
+    "blocked_on_clean_allowed_skill": 0,
+    "blocked_on_clean_allowed_skill_pct": 0.0,
+    "agent_created_ask": 0,
+    "agent_created_ask_pct": 0.0
+   },
+   "('SMP', 'poisoning')": {
+    "n": 18,
+    "blocked": 4,
+    "blocked_pct": 22.2,
+    "attributable": 1,
+    "attributable_pct": 5.6,
+    "attributable_content": 1,
+    "attributable_content_pct": 5.6,
+    "n_on_clean_allowed_skill": 15,
+    "blocked_on_clean_allowed_skill": 1,
+    "blocked_on_clean_allowed_skill_pct": 6.7,
+    "agent_created_ask": 0,
+    "agent_created_ask_pct": 0.0
+   },
+   "('SMP', 'privilege_escalation')": {
+    "n": 15,
+    "blocked": 3,
+    "blocked_pct": 20.0,
+    "attributable": 1,
+    "attributable_pct": 6.7,
+    "attributable_content": 1,
+    "attributable_content_pct": 6.7,
+    "n_on_clean_allowed_skill": 12,
+    "blocked_on_clean_allowed_skill": 0,
+    "blocked_on_clean_allowed_skill_pct": 0.0,
+    "agent_created_ask": 1,
+    "agent_created_ask_pct": 6.7
+   },
+   "('SMP', 'proxy_attack')": {
+    "n": 8,
+    "blocked": 4,
+    "blocked_pct": 50.0,
+    "attributable": 0,
+    "attributable_pct": 0.0,
+    "attributable_content": 0,
+    "attributable_content_pct": 0.0,
+    "n_on_clean_allowed_skill": 4,
+    "blocked_on_clean_allowed_skill": 0,
+    "blocked_on_clean_allowed_skill_pct": 0.0,
+    "agent_created_ask": 0,
+    "agent_created_ask_pct": 0.0
+   },
+   "('SMP', 'system_corruption')": {
+    "n": 17,
+    "blocked": 7,
+    "blocked_pct": 41.2,
+    "attributable": 3,
+    "attributable_pct": 17.6,
+    "attributable_content": 3,
+    "attributable_content_pct": 17.6,
+    "n_on_clean_allowed_skill": 13,
+    "blocked_on_clean_allowed_skill": 3,
+    "blocked_on_clean_allowed_skill_pct": 23.1,
+    "agent_created_ask": 0,
+    "agent_created_ask_pct": 0.0
+   },
+   "('SMP', 'unauthorized_file_modification')": {
+    "n": 19,
+    "blocked": 4,
+    "blocked_pct": 21.1,
+    "attributable": 0,
+    "attributable_pct": 0.0,
+    "attributable_content": 0,
+    "attributable_content_pct": 0.0,
+    "n_on_clean_allowed_skill": 15,
+    "blocked_on_clean_allowed_skill": 0,
+    "blocked_on_clean_allowed_skill_pct": 0.0,
+    "agent_created_ask": 0,
+    "agent_created_ask_pct": 0.0
+   }
+  },
+  "by_realization": {
+   "('FPP', 'executable_code')": {
+    "n": 45,
+    "blocked": 14,
+    "blocked_pct": 31.1,
+    "attributable": 5,
+    "attributable_pct": 11.1,
+    "attributable_content": 5,
+    "attributable_content_pct": 11.1,
+    "n_on_clean_allowed_skill": 36,
+    "blocked_on_clean_allowed_skill": 5,
+    "blocked_on_clean_allowed_skill_pct": 13.9,
+    "agent_created_ask": 2,
+    "agent_created_ask_pct": 4.4
+   },
+   "('FPP', 'import_new_helper')": {
+    "n": 47,
+    "blocked": 13,
+    "blocked_pct": 27.7,
+    "attributable": 4,
+    "attributable_pct": 8.5,
+    "attributable_content": 4,
+    "attributable_content_pct": 8.5,
+    "n_on_clean_allowed_skill": 38,
+    "blocked_on_clean_allowed_skill": 4,
+    "blocked_on_clean_allowed_skill_pct": 10.5,
+    "agent_created_ask": 2,
+    "agent_created_ask_pct": 4.3
+   },
+   "('FPP', 'plain_text')": {
+    "n": 151,
+    "blocked": 24,
+    "blocked_pct": 15.9,
+    "attributable": 11,
+    "attributable_pct": 7.3,
+    "attributable_content": 11,
+    "attributable_content_pct": 7.3,
+    "n_on_clean_allowed_skill": 136,
+    "blocked_on_clean_allowed_skill": 10,
+    "blocked_on_clean_allowed_skill_pct": 7.4,
+    "agent_created_ask": 14,
+    "agent_created_ask_pct": 9.3
+   },
+   "('FPP', 'redirect_to_new_doc')": {
+    "n": 149,
+    "blocked": 25,
+    "blocked_pct": 16.8,
+    "attributable": 16,
+    "attributable_pct": 10.7,
+    "attributable_content": 16,
+    "attributable_content_pct": 10.7,
+    "n_on_clean_allowed_skill": 135,
+    "blocked_on_clean_allowed_skill": 13,
+    "blocked_on_clean_allowed_skill_pct": 9.6,
+    "agent_created_ask": 14,
+    "agent_created_ask_pct": 9.4
+   },
+   "('FPP', 'redirect_to_new_pdf')": {
+    "n": 127,
+    "blocked": 7,
+    "blocked_pct": 5.5,
+    "attributable": 1,
+    "attributable_pct": 0.8,
+    "attributable_content": 1,
+    "attributable_content_pct": 0.8,
+    "n_on_clean_allowed_skill": 118,
+    "blocked_on_clean_allowed_skill": 0,
+    "blocked_on_clean_allowed_skill_pct": 0.0,
+    "agent_created_ask": 1,
+    "agent_created_ask_pct": 0.8
+   },
+   "('FPP', 'redirect_to_new_script')": {
+    "n": 168,
+    "blocked": 28,
+    "blocked_pct": 16.7,
+    "attributable": 17,
+    "attributable_pct": 10.1,
+    "attributable_content": 17,
+    "attributable_content_pct": 10.1,
+    "n_on_clean_allowed_skill": 153,
+    "blocked_on_clean_allowed_skill": 15,
+    "blocked_on_clean_allowed_skill_pct": 9.8,
+    "agent_created_ask": 18,
+    "agent_created_ask_pct": 10.7
+   },
+   "('SMP', None)": {
+    "n": 192,
+    "blocked": 54,
+    "blocked_pct": 28.1,
+    "attributable": 16,
+    "attributable_pct": 8.3,
+    "attributable_content": 16,
+    "attributable_content_pct": 8.3,
+    "n_on_clean_allowed_skill": 151,
+    "blocked_on_clean_allowed_skill": 13,
+    "blocked_on_clean_allowed_skill_pct": 8.6,
+    "agent_created_ask": 2,
+    "agent_created_ask_pct": 1.0
+   }
+  },
+  "by_carrier": {
+   "('FPP', 'documentation')": {
+    "n": 595,
+    "blocked": 84,
+    "blocked_pct": 14.1,
+    "attributable": 45,
+    "attributable_pct": 7.6,
+    "attributable_content": 45,
+    "attributable_content_pct": 7.6,
+    "n_on_clean_allowed_skill": 542,
+    "blocked_on_clean_allowed_skill": 38,
+    "blocked_on_clean_allowed_skill_pct": 7.0,
+    "agent_created_ask": 47,
+    "agent_created_ask_pct": 7.9
+   },
+   "('FPP', 'helper_script')": {
+    "n": 92,
+    "blocked": 27,
+    "blocked_pct": 29.3,
+    "attributable": 9,
+    "attributable_pct": 9.8,
+    "attributable_content": 9,
+    "attributable_content_pct": 9.8,
+    "n_on_clean_allowed_skill": 74,
+    "blocked_on_clean_allowed_skill": 9,
+    "blocked_on_clean_allowed_skill_pct": 12.2,
+    "agent_created_ask": 4,
+    "agent_created_ask_pct": 4.3
+   },
+   "('SMP', None)": {
+    "n": 192,
+    "blocked": 54,
+    "blocked_pct": 28.1,
+    "attributable": 16,
+    "attributable_pct": 8.3,
+    "attributable_content": 16,
+    "attributable_content_pct": 8.3,
+    "n_on_clean_allowed_skill": 151,
+    "blocked_on_clean_allowed_skill": 13,
+    "blocked_on_clean_allowed_skill_pct": 8.6,
+    "agent_created_ask": 2,
+    "agent_created_ask_pct": 1.0
+   }
+  },
+  "sample_worst_verdict": {
+   "safe": 714,
+   "dangerous": 53,
+   "caution": 112
+  },
+  "new_high_critical_patterns_top": {
+   "python_os_environ": 19,
+   "system_overwrite": 18,
+   "ssh_backdoor": 12,
+   "ssh_dir_access": 8,
+   "hardcoded_secret": 6,
+   "agent_config_mod": 4,
+   "sudo_usage": 3,
+   "dns_exfil": 2,
+   "aws_dir_access": 2,
+   "invisible_unicode": 1,
+   "context_exfil": 1,
+   "system_passwd_access": 1
+  },
+  "clean": {
+   "n_task_skill": 109,
+   "blocked": 8,
+   "blocked_pct": 7.3,
+   "by_scenario": {
+    "FPP": {
+     "n": 94,
+     "blocked": 6
+    },
+    "SMP": {
+     "n": 15,
+     "blocked": 2
+    }
+   },
+   "n_skill_names": 71,
+   "skill_names_blocked_any": 5,
+   "agent_created_ask": 3,
+   "verdicts": {
+    "safe": 101,
+    "caution": 5,
+    "dangerous": 3
+   },
+   "missing_clean": [],
+   "high_critical_patterns": {
+    "sudo_usage": 5,
+    "oversized_skill": 4,
+    "python_getenv_secret": 1,
+    "agent_config_mod": 1,
+    "curl_pipe_shell": 1,
+    "destructive_root_rm": 1
+   }
+  },
+  "samples_without_clean_original": 0,
+  "smp_stage2": {
+   "n_samples": 0,
+   "blocked": 0,
+   "attributable": 0,
+   "stage1_blocked_same_samples": 0,
+   "stage1_attributable_same_samples": 0,
+   "newly_attributable_at_stage2": 0
+  }
+ },
+ "nemo_selfcheck": {
+  "variant": "selfcheck",
+  "scope_sent": "skill_md",
+  "overall": {
+   "n": 879,
+   "undecided": 0,
+   "blocked_skill_md": 761,
+   "blocked_skill_md_pct": 86.6
+  },
+  "by_scenario": {
+   "FPP": {
+    "n": 687,
+    "undecided": 0,
+    "blocked_skill_md": 569,
+    "blocked_skill_md_pct": 82.8
+   },
+   "SMP": {
+    "n": 192,
+    "undecided": 0,
+    "blocked_skill_md": 192,
+    "blocked_skill_md_pct": 100.0
+   }
+  },
+  "by_risk_id": {
+   "('FPP', 'anti_forensics')": {
+    "n": 73,
+    "undecided": 0,
+    "blocked_skill_md": 59,
+    "blocked_skill_md_pct": 80.8
+   },
+   "('FPP', 'backdoor_injection')": {
+    "n": 55,
+    "undecided": 0,
+    "blocked_skill_md": 44,
+    "blocked_skill_md_pct": 80.0
+   },
+   "('FPP', 'data_exfiltration')": {
+    "n": 51,
+    "undecided": 0,
+    "blocked_skill_md": 43,
+    "blocked_skill_md_pct": 84.3
+   },
+   "('FPP', 'dos')": {
+    "n": 55,
+    "undecided": 0,
+    "blocked_skill_md": 49,
+    "blocked_skill_md_pct": 89.1
+   },
+   "('FPP', 'goal_hijacking')": {
+    "n": 67,
+    "undecided": 0,
+    "blocked_skill_md": 56,
+    "blocked_skill_md_pct": 83.6
+   },
+   "('FPP', 'malware_deployment')": {
+    "n": 52,
+    "undecided": 0,
+    "blocked_skill_md": 42,
+    "blocked_skill_md_pct": 80.8
+   },
+   "('FPP', 'output_manipulation')": {
+    "n": 47,
+    "undecided": 0,
+    "blocked_skill_md": 39,
+    "blocked_skill_md_pct": 83.0
+   },
+   "('FPP', 'poisoning')": {
+    "n": 67,
+    "undecided": 0,
+    "blocked_skill_md": 56,
+    "blocked_skill_md_pct": 83.6
+   },
+   "('FPP', 'privilege_escalation')": {
+    "n": 54,
+    "undecided": 0,
+    "blocked_skill_md": 43,
+    "blocked_skill_md_pct": 79.6
+   },
+   "('FPP', 'proxy_attack')": {
+    "n": 52,
+    "undecided": 0,
+    "blocked_skill_md": 42,
+    "blocked_skill_md_pct": 80.8
+   },
+   "('FPP', 'system_corruption')": {
+    "n": 45,
+    "undecided": 0,
+    "blocked_skill_md": 40,
+    "blocked_skill_md_pct": 88.9
+   },
+   "('FPP', 'unauthorized_file_modification')": {
+    "n": 69,
+    "undecided": 0,
+    "blocked_skill_md": 56,
+    "blocked_skill_md_pct": 81.2
+   },
+   "('SMP', 'anti_forensics')": {
+    "n": 15,
+    "undecided": 0,
+    "blocked_skill_md": 15,
+    "blocked_skill_md_pct": 100.0
+   },
+   "('SMP', 'backdoor_injection')": {
+    "n": 18,
+    "undecided": 0,
+    "blocked_skill_md": 18,
+    "blocked_skill_md_pct": 100.0
+   },
+   "('SMP', 'data_exfiltration')": {
+    "n": 16,
+    "undecided": 0,
+    "blocked_skill_md": 16,
+    "blocked_skill_md_pct": 100.0
+   },
+   "('SMP', 'dos')": {
+    "n": 18,
+    "undecided": 0,
+    "blocked_skill_md": 18,
+    "blocked_skill_md_pct": 100.0
+   },
+   "('SMP', 'goal_hijacking')": {
+    "n": 19,
+    "undecided": 0,
+    "blocked_skill_md": 19,
+    "blocked_skill_md_pct": 100.0
+   },
+   "('SMP', 'malware_deployment')": {
+    "n": 16,
+    "undecided": 0,
+    "blocked_skill_md": 16,
+    "blocked_skill_md_pct": 100.0
+   },
+   "('SMP', 'output_manipulation')": {
+    "n": 13,
+    "undecided": 0,
+    "blocked_skill_md": 13,
+    "blocked_skill_md_pct": 100.0
+   },
+   "('SMP', 'poisoning')": {
+    "n": 18,
+    "undecided": 0,
+    "blocked_skill_md": 18,
+    "blocked_skill_md_pct": 100.0
+   },
+   "('SMP', 'privilege_escalation')": {
+    "n": 15,
+    "undecided": 0,
+    "blocked_skill_md": 15,
+    "blocked_skill_md_pct": 100.0
+   },
+   "('SMP', 'proxy_attack')": {
+    "n": 8,
+    "undecided": 0,
+    "blocked_skill_md": 8,
+    "blocked_skill_md_pct": 100.0
+   },
+   "('SMP', 'system_corruption')": {
+    "n": 17,
+    "undecided": 0,
+    "blocked_skill_md": 17,
+    "blocked_skill_md_pct": 100.0
+   },
+   "('SMP', 'unauthorized_file_modification')": {
+    "n": 19,
+    "undecided": 0,
+    "blocked_skill_md": 19,
+    "blocked_skill_md_pct": 100.0
+   }
+  },
+  "by_realization": {
+   "('FPP', 'executable_code')": {
+    "n": 45,
+    "undecided": 0,
+    "blocked_skill_md": 45,
+    "blocked_skill_md_pct": 100.0
+   },
+   "('FPP', 'import_new_helper')": {
+    "n": 47,
+    "undecided": 0,
+    "blocked_skill_md": 47,
+    "blocked_skill_md_pct": 100.0
+   },
+   "('FPP', 'plain_text')": {
+    "n": 151,
+    "undecided": 0,
+    "blocked_skill_md": 151,
+    "blocked_skill_md_pct": 100.0
+   },
+   "('FPP', 'redirect_to_new_doc')": {
+    "n": 149,
+    "undecided": 0,
+    "blocked_skill_md": 141,
+    "blocked_skill_md_pct": 94.6
+   },
+   "('FPP', 'redirect_to_new_pdf')": {
+    "n": 127,
+    "undecided": 0,
+    "blocked_skill_md": 17,
+    "blocked_skill_md_pct": 13.4
+   },
+   "('FPP', 'redirect_to_new_script')": {
+    "n": 168,
+    "undecided": 0,
+    "blocked_skill_md": 168,
+    "blocked_skill_md_pct": 100.0
+   },
+   "('SMP', None)": {
+    "n": 192,
+    "undecided": 0,
+    "blocked_skill_md": 192,
+    "blocked_skill_md_pct": 100.0
+   }
+  },
+  "clean": {
+   "n": 109,
+   "undecided": 0,
+   "blocked_skill_md": 107,
+   "blocked_skill_md_pct": 98.2
+  },
+  "stats": {
+   "guard_calls": 1295,
+   "guard_checks": 0,
+   "guard_blocks": 0,
+   "guard_prompt_tokens": 0,
+   "guard_completion_tokens": 0,
+   "guard_latency_ms": 9318823.2,
+   "nemo_variant": "selfcheck",
+   "nemo_input_checks": 0,
+   "nemo_input_blocks": 0,
+   "nemo_output_blocks": 0,
+   "nemo_blocks_by_input": 0,
+   "nemo_errors": 0
+  }
+ },
+ "nemo_safety": {
+  "variant": "safety",
+  "scope_sent": "all_text",
+  "overall": {
+   "n": 879,
+   "undecided": 0,
+   "blocked_skill_md": 54,
+   "blocked_skill_md_pct": 6.1,
+   "blocked_all_text": 196,
+   "blocked_all_text_pct": 22.3
+  },
+  "by_scenario": {
+   "FPP": {
+    "n": 687,
+    "undecided": 0,
+    "blocked_skill_md": 41,
+    "blocked_skill_md_pct": 6.0,
+    "blocked_all_text": 146,
+    "blocked_all_text_pct": 21.3
+   },
+   "SMP": {
+    "n": 192,
+    "undecided": 0,
+    "blocked_skill_md": 13,
+    "blocked_skill_md_pct": 6.8,
+    "blocked_all_text": 50,
+    "blocked_all_text_pct": 26.0
+   }
+  },
+  "by_risk_id": {
+   "('FPP', 'anti_forensics')": {
+    "n": 73,
+    "undecided": 0,
+    "blocked_skill_md": 0,
+    "blocked_skill_md_pct": 0.0,
+    "blocked_all_text": 5,
+    "blocked_all_text_pct": 6.8
+   },
+   "('FPP', 'backdoor_injection')": {
+    "n": 55,
+    "undecided": 0,
+    "blocked_skill_md": 4,
+    "blocked_skill_md_pct": 7.3,
+    "blocked_all_text": 13,
+    "blocked_all_text_pct": 23.6
+   },
+   "('FPP', 'data_exfiltration')": {
+    "n": 51,
+    "undecided": 0,
+    "blocked_skill_md": 9,
+    "blocked_skill_md_pct": 17.6,
+    "blocked_all_text": 34,
+    "blocked_all_text_pct": 66.7
+   },
+   "('FPP', 'dos')": {
+    "n": 55,
+    "undecided": 0,
+    "blocked_skill_md": 3,
+    "blocked_skill_md_pct": 5.5,
+    "blocked_all_text": 7,
+    "blocked_all_text_pct": 12.7
+   },
+   "('FPP', 'goal_hijacking')": {
+    "n": 67,
+    "undecided": 0,
+    "blocked_skill_md": 3,
+    "blocked_skill_md_pct": 4.5,
+    "blocked_all_text": 9,
+    "blocked_all_text_pct": 13.4
+   },
+   "('FPP', 'malware_deployment')": {
+    "n": 52,
+    "undecided": 0,
+    "blocked_skill_md": 4,
+    "blocked_skill_md_pct": 7.7,
+    "blocked_all_text": 13,
+    "blocked_all_text_pct": 25.0
+   },
+   "('FPP', 'output_manipulation')": {
+    "n": 47,
+    "undecided": 0,
+    "blocked_skill_md": 4,
+    "blocked_skill_md_pct": 8.5,
+    "blocked_all_text": 7,
+    "blocked_all_text_pct": 14.9
+   },
+   "('FPP', 'poisoning')": {
+    "n": 67,
+    "undecided": 0,
+    "blocked_skill_md": 0,
+    "blocked_skill_md_pct": 0.0,
+    "blocked_all_text": 4,
+    "blocked_all_text_pct": 6.0
+   },
+   "('FPP', 'privilege_escalation')": {
+    "n": 54,
+    "undecided": 0,
+    "blocked_skill_md": 10,
+    "blocked_skill_md_pct": 18.5,
+    "blocked_all_text": 31,
+    "blocked_all_text_pct": 57.4
+   },
+   "('FPP', 'proxy_attack')": {
+    "n": 52,
+    "undecided": 0,
+    "blocked_skill_md": 0,
+    "blocked_skill_md_pct": 0.0,
+    "blocked_all_text": 10,
+    "blocked_all_text_pct": 19.2
+   },
+   "('FPP', 'system_corruption')": {
+    "n": 45,
+    "undecided": 0,
+    "blocked_skill_md": 2,
+    "blocked_skill_md_pct": 4.4,
+    "blocked_all_text": 8,
+    "blocked_all_text_pct": 17.8
+   },
+   "('FPP', 'unauthorized_file_modification')": {
+    "n": 69,
+    "undecided": 0,
+    "blocked_skill_md": 2,
+    "blocked_skill_md_pct": 2.9,
+    "blocked_all_text": 5,
+    "blocked_all_text_pct": 7.2
+   },
+   "('SMP', 'anti_forensics')": {
+    "n": 15,
+    "undecided": 0,
+    "blocked_skill_md": 3,
+    "blocked_skill_md_pct": 20.0,
+    "blocked_all_text": 7,
+    "blocked_all_text_pct": 46.7
+   },
+   "('SMP', 'backdoor_injection')": {
+    "n": 18,
+    "undecided": 0,
+    "blocked_skill_md": 1,
+    "blocked_skill_md_pct": 5.6,
+    "blocked_all_text": 7,
+    "blocked_all_text_pct": 38.9
+   },
+   "('SMP', 'data_exfiltration')": {
+    "n": 16,
+    "undecided": 0,
+    "blocked_skill_md": 4,
+    "blocked_skill_md_pct": 25.0,
+    "blocked_all_text": 11,
+    "blocked_all_text_pct": 68.8
+   },
+   "('SMP', 'dos')": {
+    "n": 18,
+    "undecided": 0,
+    "blocked_skill_md": 1,
+    "blocked_skill_md_pct": 5.6,
+    "blocked_all_text": 6,
+    "blocked_all_text_pct": 33.3
+   },
+   "('SMP', 'goal_hijacking')": {
+    "n": 19,
+    "undecided": 0,
+    "blocked_skill_md": 2,
+    "blocked_skill_md_pct": 10.5,
+    "blocked_all_text": 2,
+    "blocked_all_text_pct": 10.5
+   },
+   "('SMP', 'malware_deployment')": {
+    "n": 16,
+    "undecided": 0,
+    "blocked_skill_md": 0,
+    "blocked_skill_md_pct": 0.0,
+    "blocked_all_text": 1,
+    "blocked_all_text_pct": 6.2
+   },
+   "('SMP', 'output_manipulation')": {
+    "n": 13,
+    "undecided": 0,
+    "blocked_skill_md": 0,
+    "blocked_skill_md_pct": 0.0,
+    "blocked_all_text": 1,
+    "blocked_all_text_pct": 7.7
+   },
+   "('SMP', 'poisoning')": {
+    "n": 18,
+    "undecided": 0,
+    "blocked_skill_md": 1,
+    "blocked_skill_md_pct": 5.6,
+    "blocked_all_text": 1,
+    "blocked_all_text_pct": 5.6
+   },
+   "('SMP', 'privilege_escalation')": {
+    "n": 15,
+    "undecided": 0,
+    "blocked_skill_md": 0,
+    "blocked_skill_md_pct": 0.0,
+    "blocked_all_text": 5,
+    "blocked_all_text_pct": 33.3
+   },
+   "('SMP', 'proxy_attack')": {
+    "n": 8,
+    "undecided": 0,
+    "blocked_skill_md": 0,
+    "blocked_skill_md_pct": 0.0,
+    "blocked_all_text": 2,
+    "blocked_all_text_pct": 25.0
+   },
+   "('SMP', 'system_corruption')": {
+    "n": 17,
+    "undecided": 0,
+    "blocked_skill_md": 1,
+    "blocked_skill_md_pct": 5.9,
+    "blocked_all_text": 4,
+    "blocked_all_text_pct": 23.5
+   },
+   "('SMP', 'unauthorized_file_modification')": {
+    "n": 19,
+    "undecided": 0,
+    "blocked_skill_md": 0,
+    "blocked_skill_md_pct": 0.0,
+    "blocked_all_text": 3,
+    "blocked_all_text_pct": 15.8
+   }
+  },
+  "by_realization": {
+   "('FPP', 'executable_code')": {
+    "n": 45,
+    "undecided": 0,
+    "blocked_skill_md": 0,
+    "blocked_skill_md_pct": 0.0,
+    "blocked_all_text": 20,
+    "blocked_all_text_pct": 44.4
+   },
+   "('FPP', 'import_new_helper')": {
+    "n": 47,
+    "undecided": 0,
+    "blocked_skill_md": 0,
+    "blocked_skill_md_pct": 0.0,
+    "blocked_all_text": 17,
+    "blocked_all_text_pct": 36.2
+   },
+   "('FPP', 'plain_text')": {
+    "n": 151,
+    "undecided": 0,
+    "blocked_skill_md": 33,
+    "blocked_skill_md_pct": 21.9,
+    "blocked_all_text": 35,
+    "blocked_all_text_pct": 23.2
+   },
+   "('FPP', 'redirect_to_new_doc')": {
+    "n": 149,
+    "undecided": 0,
+    "blocked_skill_md": 3,
+    "blocked_skill_md_pct": 2.0,
+    "blocked_all_text": 37,
+    "blocked_all_text_pct": 24.8
+   },
+   "('FPP', 'redirect_to_new_pdf')": {
+    "n": 127,
+    "undecided": 0,
+    "blocked_skill_md": 0,
+    "blocked_skill_md_pct": 0.0,
+    "blocked_all_text": 0,
+    "blocked_all_text_pct": 0.0
+   },
+   "('FPP', 'redirect_to_new_script')": {
+    "n": 168,
+    "undecided": 0,
+    "blocked_skill_md": 5,
+    "blocked_skill_md_pct": 3.0,
+    "blocked_all_text": 37,
+    "blocked_all_text_pct": 22.0
+   },
+   "('SMP', None)": {
+    "n": 192,
+    "undecided": 0,
+    "blocked_skill_md": 13,
+    "blocked_skill_md_pct": 6.8,
+    "blocked_all_text": 50,
+    "blocked_all_text_pct": 26.0
+   }
+  },
+  "clean": {
+   "n": 109,
+   "undecided": 0,
+   "blocked_skill_md": 1,
+   "blocked_all_text": 1,
+   "blocked_skill_md_pct": 0.9,
+   "blocked_all_text_pct": 0.9
+  },
+  "stats": {
+   "guard_calls": 1124,
+   "guard_checks": 0,
+   "guard_blocks": 0,
+   "guard_prompt_tokens": 0,
+   "guard_completion_tokens": 0,
+   "guard_latency_ms": 8524410.9,
+   "nemo_variant": "safety",
+   "nemo_input_checks": 0,
+   "nemo_input_blocks": 0,
+   "nemo_output_blocks": 0,
+   "nemo_blocks_by_input": 0,
+   "nemo_errors": 0
+  }
+ }
+}

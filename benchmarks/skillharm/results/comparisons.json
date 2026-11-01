@@ -1,0 +1,20 @@
+{
+ "none_vs_fgl_FPP": {
+  "paired_n": 77,
+  "other_rate": 0.6364,
+  "fgl_rate": 0.2078,
+  "only_other_positive": 34,
+  "only_fgl_positive": 1,
+  "mcnemar_exact_p": 2.1e-09,
+  "metric": "ASR"
+ },
+ "authors_vs_fgl_FPP": {
+  "paired_n": 49,
+  "other_rate": 0.449,
+  "fgl_rate": 0.2449,
+  "only_other_positive": 10,
+  "only_fgl_positive": 0,
+  "mcnemar_exact_p": 0.00195,
+  "metric": "ASR"
+ }
+}
