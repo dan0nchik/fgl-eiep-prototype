@@ -28,6 +28,7 @@ from typing import Any, Dict, List
 from openai import OpenAI
 
 from fgl_guard import FGLMonitor
+from guards import load_guard
 
 ASB = os.environ.get("ASB_PATH", str(Path.home() / "dev/bench/Agent-SafetyBench"))
 sys.path.insert(0, str(Path(ASB) / "environments"))
@@ -70,7 +71,7 @@ def tool_desc_text(tool_descs, name):
     return ""
 
 
-def run_case(client, agent_model, monitor: FGLMonitor, d: Dict[str, Any]) -> Dict[str, Any]:
+def run_case(client, agent_model, monitor, d: Dict[str, Any]) -> Dict[str, Any]:
     env_manager = EnvManager()
     task = d["instruction"]
     messages: List[Dict[str, Any]] = [{"role": "system", "content": SYS_PROMPT}]
@@ -136,7 +137,8 @@ def run_case(client, agent_model, monitor: FGLMonitor, d: Dict[str, Any]) -> Dic
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--condition", choices=["none", "fgl_monitor"], default="fgl_monitor")
+    ap.add_argument("--condition", default="fgl_monitor",
+                    help="none | fgl_monitor | hermes_* | nemo* | fgl_abl_* (see guards/__init__.py)")
     ap.add_argument("--agent-model", default="gpt-4.1-mini")
     ap.add_argument("--guard-model", default="gpt-4.1-mini")
     ap.add_argument("--limit", type=int, default=0)
@@ -158,8 +160,7 @@ def main():
     if a.base_url:
         kw["base_url"] = a.base_url
     client = OpenAI(**kw)
-    monitor = FGLMonitor(model=a.guard_model, api_key=a.api_key, base_url=a.base_url,
-                         enabled=(a.condition == "fgl_monitor"))
+    monitor = load_guard(a.condition, model=a.guard_model, api_key=a.api_key, base_url=a.base_url)
 
     outdir = Path(__file__).parent / "results" / f"asb-{a.agent_model}-{a.condition}"
     outdir.mkdir(parents=True, exist_ok=True)
