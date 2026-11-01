@@ -1,0 +1,19 @@
+# NeMo Guardrails 0.24.1, "content safety" rails (guardrails library: content_safety) with the official
+# NemoGuard/Aegis 23-category prompt from github NVIDIA/NeMo-Guardrails@v0.24.1 examples/configs/content_safety/prompts.yml
+# ($model=content_safety tasks, copied verbatim with their output parsers). The official example points the
+# content_safety model at nvidia/llama-3.1-nemoguard-8b-content-safety via NIM; here it is gpt-4.1-mini (OpenAI).
+models:
+  - type: main
+    engine: openai
+    model: gpt-4.1-mini
+  - type: content_safety
+    engine: openai
+    model: gpt-4.1-mini
+
+rails:
+  input:
+    flows:
+      - content safety check input $model=content_safety
+  output:
+    flows:
+      - content safety check output $model=content_safety

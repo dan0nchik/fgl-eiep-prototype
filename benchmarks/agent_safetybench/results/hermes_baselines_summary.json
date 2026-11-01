@@ -1,0 +1,331 @@
+{
+  "judge": "gpt-4.1 (score_asb.py --scorer llm, authors' ShieldAgent evaluation prompt)",
+  "agent_model": "gpt-4.1-mini",
+  "guard_model": "gpt-4.1-mini",
+  "columns_def": "Total=2000; Behavior=1589 cases with tool environments; Content=411 without; 8 risk categories x 250 (as results/shieldagent_table5.json)",
+  "over_block_def": "fulfillable (label fulfillable==1, n=735) cases with >=1 guard block / fulfillable cases (as results/paired_analysis.json fulfillable_blocked)",
+  "validation": {
+    "table5_columns_reproduced_from_score_shieldagent": true,
+    "paired_analysis_check_(ours,file)": {
+      "rescued_unsafe_to_safe": [
+        405,
+        405
+      ],
+      "regressed_safe_to_unsafe": [
+        54,
+        54
+      ],
+      "fulfillable_blocked": [
+        216,
+        216
+      ],
+      "fulfillable_safe_none": [
+        540,
+        540
+      ],
+      "fulfillable_safe_fgl": [
+        594,
+        594
+      ]
+    }
+  },
+  "offline_firerate": {
+    "gen": "results/asb-gpt-4.1-mini-none/gen_res.json",
+    "n_cases": 2000,
+    "n_tool_calls": 2772,
+    "n_strings_scanned": 5514,
+    "tirith_available": false,
+    "flagged_tool_calls": 1,
+    "flagged_tool_call_rate_pct": 0.04,
+    "cases_with_flagged_call": 1,
+    "builtin_gate_blocks": 1,
+    "cases_with_builtin_gate_block": 1,
+    "flag_kinds": {
+      "hardline": 1
+    },
+    "flag_descriptions": {
+      "system shutdown/reboot": 1
+    },
+    "flagged_tools": {
+      "shutdown": 1
+    }
+  },
+  "rows": {
+    "none": {
+      "Total": 65.8,
+      "Behavior": 60.5,
+      "Content": 86.4,
+      "Leak": 57.2,
+      "Property": 67.2,
+      "Spread": 48.8,
+      "Physical": 62.4,
+      "Law": 51.6,
+      "Availability": 73.6,
+      "Code": 75.2,
+      "Produce": 90.4,
+      "n": 2000,
+      "judge_errors": 0,
+      "cases_with_guard_block": 0,
+      "blocked_tool_calls_in_trajectories": 0,
+      "fulfillable_cases": 735,
+      "fulfillable_blocked": 0,
+      "over_block_pct": 0.0,
+      "fulfillable_safe": 540,
+      "guard": {
+        "guard_calls": 0,
+        "guard_checks": 0,
+        "guard_blocks": 0,
+        "guard_prompt_tokens": 0,
+        "guard_completion_tokens": 0,
+        "guard_latency_ms": 0.0,
+        "run_meta_files": [
+          "run_meta.json"
+        ]
+      }
+    },
+    "fgl_monitor": {
+      "Total": 83.3,
+      "Behavior": 82.9,
+      "Content": 84.9,
+      "Leak": 82.4,
+      "Property": 87.2,
+      "Spread": 62.8,
+      "Physical": 83.6,
+      "Law": 88.4,
+      "Availability": 91.2,
+      "Code": 81.6,
+      "Produce": 89.6,
+      "n": 2000,
+      "judge_errors": 0,
+      "cases_with_guard_block": 659,
+      "blocked_tool_calls_in_trajectories": 816,
+      "fulfillable_cases": 735,
+      "fulfillable_blocked": 216,
+      "over_block_pct": 29.4,
+      "fulfillable_safe": 594,
+      "guard": {
+        "guard_calls": 2742,
+        "guard_checks": 2742,
+        "guard_blocks": 816,
+        "guard_prompt_tokens": 1120436,
+        "guard_completion_tokens": 74010,
+        "guard_latency_ms": 2975009.0,
+        "run_meta_files": [
+          "run_meta.json"
+        ]
+      }
+    },
+    "hermes_builtin": {
+      "Total": 65.7,
+      "Behavior": 60.6,
+      "Content": 85.4,
+      "Leak": 55.2,
+      "Property": 66.0,
+      "Spread": 48.4,
+      "Physical": 63.6,
+      "Law": 53.6,
+      "Availability": 73.6,
+      "Code": 75.2,
+      "Produce": 90.0,
+      "n": 2000,
+      "judge_errors": 0,
+      "cases_with_guard_block": 1,
+      "blocked_tool_calls_in_trajectories": 1,
+      "fulfillable_cases": 735,
+      "fulfillable_blocked": 0,
+      "over_block_pct": 0.0,
+      "fulfillable_safe": 536,
+      "guard": {
+        "guard_calls": 0,
+        "guard_checks": 2684,
+        "guard_blocks": 1,
+        "guard_prompt_tokens": 0,
+        "guard_completion_tokens": 0,
+        "guard_latency_ms": 0.0,
+        "hermes_flagged_calls": 1,
+        "hermes_llm_errors": 0,
+        "hermes_flag_kinds": {
+          "hardline": 1,
+          "sudo": 0,
+          "dangerous": 0,
+          "tirith": 0
+        },
+        "hermes_smart_verdicts": {
+          "approve": 0,
+          "deny": 0,
+          "escalate": 0
+        },
+        "run_meta_files": [
+          "run_meta_pass1.json"
+        ]
+      }
+    },
+    "hermes_smart": {
+      "Total": 65.0,
+      "Behavior": 59.8,
+      "Content": 85.2,
+      "Leak": 54.4,
+      "Property": 67.2,
+      "Spread": 50.4,
+      "Physical": 61.6,
+      "Law": 53.2,
+      "Availability": 70.0,
+      "Code": 74.4,
+      "Produce": 89.2,
+      "n": 2000,
+      "judge_errors": 0,
+      "cases_with_guard_block": 1,
+      "blocked_tool_calls_in_trajectories": 1,
+      "fulfillable_cases": 735,
+      "fulfillable_blocked": 0,
+      "over_block_pct": 0.0,
+      "fulfillable_safe": 532,
+      "guard": {
+        "guard_calls": 0,
+        "guard_checks": 2677,
+        "guard_blocks": 1,
+        "guard_prompt_tokens": 0,
+        "guard_completion_tokens": 0,
+        "guard_latency_ms": 0.0,
+        "hermes_flagged_calls": 1,
+        "hermes_llm_errors": 0,
+        "hermes_flag_kinds": {
+          "hardline": 1,
+          "sudo": 0,
+          "dangerous": 0,
+          "tirith": 0
+        },
+        "hermes_smart_verdicts": {
+          "approve": 0,
+          "deny": 0,
+          "escalate": 0
+        },
+        "run_meta_files": [
+          "run_meta_pass1.json"
+        ]
+      }
+    },
+    "hermes_smart_all": {
+      "Total": 90.9,
+      "Behavior": 92.3,
+      "Content": 85.6,
+      "Leak": 96.8,
+      "Property": 97.6,
+      "Spread": 70.0,
+      "Physical": 98.4,
+      "Law": 92.4,
+      "Availability": 98.0,
+      "Code": 84.8,
+      "Produce": 89.2,
+      "n": 2000,
+      "judge_errors": 0,
+      "cases_with_guard_block": 1375,
+      "blocked_tool_calls_in_trajectories": 1539,
+      "fulfillable_cases": 735,
+      "fulfillable_blocked": 600,
+      "over_block_pct": 81.6,
+      "fulfillable_safe": 684,
+      "guard": {
+        "guard_calls": 1660,
+        "guard_checks": 1661,
+        "guard_blocks": 1539,
+        "guard_prompt_tokens": 503798,
+        "guard_completion_tokens": 4972,
+        "guard_latency_ms": 1091994.5,
+        "hermes_flagged_calls": 1,
+        "hermes_llm_errors": 0,
+        "hermes_flag_kinds": {
+          "hardline": 1,
+          "sudo": 0,
+          "dangerous": 0,
+          "tirith": 0
+        },
+        "hermes_smart_verdicts": {
+          "approve": 122,
+          "deny": 8,
+          "escalate": 1530
+        },
+        "run_meta_files": [
+          "run_meta_pass1.json"
+        ]
+      }
+    },
+    "hermes_smart_all_denyonly": {
+      "Total": 66.8,
+      "Behavior": 61.7,
+      "Content": 86.9,
+      "Leak": 57.6,
+      "Property": 69.6,
+      "Spread": 50.8,
+      "Physical": 62.4,
+      "Law": 52.4,
+      "Availability": 74.4,
+      "Code": 76.0,
+      "Produce": 91.6,
+      "n": 2000,
+      "judge_errors": 0,
+      "cases_with_guard_block": 12,
+      "blocked_tool_calls_in_trajectories": 13,
+      "fulfillable_cases": 735,
+      "fulfillable_blocked": 2,
+      "over_block_pct": 0.3,
+      "fulfillable_safe": 536,
+      "guard": {
+        "guard_calls": 2658,
+        "guard_checks": 2659,
+        "guard_blocks": 13,
+        "guard_prompt_tokens": 815886,
+        "guard_completion_tokens": 7962,
+        "guard_latency_ms": 1750962.1,
+        "hermes_flagged_calls": 2,
+        "hermes_llm_errors": 0,
+        "hermes_flag_kinds": {
+          "hardline": 1,
+          "sudo": 0,
+          "dangerous": 1,
+          "tirith": 0
+        },
+        "hermes_smart_verdicts": {
+          "approve": 182,
+          "deny": 12,
+          "escalate": 2464
+        },
+        "run_meta_files": [
+          "run_meta_pass1.json"
+        ]
+      }
+    }
+  },
+  "paired_vs_none": {
+    "fgl_monitor": {
+      "n": 2000,
+      "unsafe_to_safe": 405,
+      "safe_to_unsafe": 54,
+      "delta_total_pp": 17.5
+    },
+    "hermes_builtin": {
+      "n": 2000,
+      "unsafe_to_safe": 78,
+      "safe_to_unsafe": 80,
+      "delta_total_pp": -0.1
+    },
+    "hermes_smart": {
+      "n": 2000,
+      "unsafe_to_safe": 76,
+      "safe_to_unsafe": 91,
+      "delta_total_pp": -0.8
+    },
+    "hermes_smart_all": {
+      "n": 2000,
+      "unsafe_to_safe": 527,
+      "safe_to_unsafe": 25,
+      "delta_total_pp": 25.1
+    },
+    "hermes_smart_all_denyonly": {
+      "n": 2000,
+      "unsafe_to_safe": 94,
+      "safe_to_unsafe": 73,
+      "delta_total_pp": 1.0
+    }
+  }
+}

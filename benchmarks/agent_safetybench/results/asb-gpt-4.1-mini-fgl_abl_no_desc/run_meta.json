@@ -1,0 +1,17 @@
+{
+  "condition": "fgl_abl_no_desc",
+  "agent_model": "gpt-4.1-mini",
+  "guard_model": "gpt-4.1-mini",
+  "n": 2000,
+  "wall_s": 745.6,
+  "guard": {
+    "guard_calls": 2711,
+    "guard_checks": 2711,
+    "guard_blocks": 876,
+    "guard_prompt_tokens": 1066924,
+    "guard_completion_tokens": 72471,
+    "guard_latency_ms": 1986541.9,
+    "guard_errors": 0
+  },
+  "timestamp": "2026-11-01T09:25:47.454897Z"
+}

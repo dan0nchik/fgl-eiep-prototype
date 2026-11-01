@@ -1,0 +1,326 @@
+{
+  "judge": "gpt-4.1 (score_asb.py --scorer llm, authors' ShieldAgent evaluation prompt)",
+  "agent_model": "gpt-4.1-mini",
+  "nemo_llm": "gpt-4.1-mini",
+  "nemoguardrails_version": "0.24.1",
+  "nemo_configs": {
+    "nemo_selfcheck": "guards/nemo_configs/selfcheck",
+    "nemo_safety": "guards/nemo_configs/safety"
+  },
+  "columns_def": "Total=2000; Behavior=1589 cases with tool environments; Content=411 without; 8 risk categories x 250 (as results/shieldagent_table5.json)",
+  "over_block_def": "fulfillable (fulfillable==1, n=735) cases with >=1 guard block / fulfillable cases (as results/paired_analysis.json fulfillable_blocked)",
+  "validation": {
+    "table5_columns_reproduced_from_score_shieldagent": true,
+    "paired_analysis_reproduced": true
+  },
+  "rows": {
+    "none": {
+      "Total": 65.8,
+      "Behavior": 60.5,
+      "Content": 86.4,
+      "Leak": 57.2,
+      "Property": 67.2,
+      "Spread": 48.8,
+      "Physical": 62.4,
+      "Law": 51.6,
+      "Availability": 73.6,
+      "Code": 75.2,
+      "Produce": 90.4,
+      "n": 2000,
+      "judge_errors": 0,
+      "cases_with_guard_block": 0,
+      "blocked_tool_calls_in_trajectories": 0,
+      "fulfillable_cases": 735,
+      "fulfillable_blocked": 0,
+      "over_block_pct": 0.0,
+      "fulfillable_safe": 540,
+      "safe_among_blocked_pct": null,
+      "guard_all_cases": {
+        "n_trajectories": 2000,
+        "cases_with_guard_block": 0,
+        "fulfillable_cases": 735,
+        "fulfillable_blocked": 0,
+        "over_block_pct": 0.0,
+        "unfulfillable_blocked": 0,
+        "behavior_cases_with_block": 0,
+        "cases_with_tool_call": 1545
+      },
+      "guard": {
+        "guard_calls": 0,
+        "guard_checks": 0,
+        "guard_blocks": 0,
+        "guard_prompt_tokens": 0,
+        "guard_completion_tokens": 0,
+        "guard_latency_ms": 0.0,
+        "mean_latency_ms_per_checked_call": null,
+        "run_meta_files": [
+          "run_meta.json"
+        ]
+      },
+      "judge_coverage": "2000/2000"
+    },
+    "fgl_monitor": {
+      "Total": 83.3,
+      "Behavior": 82.9,
+      "Content": 84.9,
+      "Leak": 82.4,
+      "Property": 87.2,
+      "Spread": 62.8,
+      "Physical": 83.6,
+      "Law": 88.4,
+      "Availability": 91.2,
+      "Code": 81.6,
+      "Produce": 89.6,
+      "n": 2000,
+      "judge_errors": 0,
+      "cases_with_guard_block": 659,
+      "blocked_tool_calls_in_trajectories": 816,
+      "fulfillable_cases": 735,
+      "fulfillable_blocked": 216,
+      "over_block_pct": 29.4,
+      "fulfillable_safe": 594,
+      "safe_among_blocked_pct": 95.9,
+      "guard_all_cases": {
+        "n_trajectories": 2000,
+        "cases_with_guard_block": 659,
+        "fulfillable_cases": 735,
+        "fulfillable_blocked": 216,
+        "over_block_pct": 29.4,
+        "unfulfillable_blocked": 443,
+        "behavior_cases_with_block": 659,
+        "cases_with_tool_call": 1543
+      },
+      "guard": {
+        "guard_calls": 2742,
+        "guard_checks": 2742,
+        "guard_blocks": 816,
+        "guard_prompt_tokens": 1120436,
+        "guard_completion_tokens": 74010,
+        "guard_latency_ms": 2975009.0,
+        "mean_latency_ms_per_checked_call": 1085.0,
+        "run_meta_files": [
+          "run_meta.json"
+        ]
+      },
+      "judge_coverage": "2000/2000"
+    },
+    "nemo_selfcheck": {
+      "Total": 70.1,
+      "Behavior": 66.9,
+      "Content": 87.1,
+      "Leak": 75.5,
+      "Property": 78.6,
+      "Spread": 49.5,
+      "Physical": 64.0,
+      "Law": 59.6,
+      "Availability": 75.8,
+      "Code": 85.6,
+      "Produce": 89.4,
+      "n": 1028,
+      "judge_errors": 972,
+      "cases_with_guard_block": 152,
+      "blocked_tool_calls_in_trajectories": 270,
+      "fulfillable_cases": 400,
+      "fulfillable_blocked": 20,
+      "over_block_pct": 5.0,
+      "fulfillable_safe": 286,
+      "safe_among_blocked_pct": 90.8,
+      "guard_all_cases": {
+        "n_trajectories": 2000,
+        "cases_with_guard_block": 248,
+        "fulfillable_cases": 735,
+        "fulfillable_blocked": 39,
+        "over_block_pct": 5.3,
+        "unfulfillable_blocked": 209,
+        "behavior_cases_with_block": 248,
+        "cases_with_tool_call": 1540
+      },
+      "cases_blocked_by_stage": {
+        "input": 210,
+        "output": 38,
+        "other": 0
+      },
+      "fulfillable_cases_blocked_by_stage": {
+        "input": 36,
+        "output": 3,
+        "other": 0
+      },
+      "guard": {
+        "guard_calls": 3642,
+        "guard_checks": 2527,
+        "guard_blocks": 270,
+        "guard_prompt_tokens": 699838,
+        "guard_completion_tokens": 3794,
+        "guard_latency_ms": 2119095.2,
+        "nemo_input_checks": 1336,
+        "nemo_input_blocks": 200,
+        "nemo_output_blocks": 49,
+        "nemo_blocks_by_input": 221,
+        "nemo_errors": 0,
+        "mean_latency_ms_per_checked_call": 838.6,
+        "run_meta_files": [
+          "run_meta.json"
+        ]
+      },
+      "judge_coverage": "1028/2000"
+    },
+    "nemo_safety": {
+      "Total": 73.1,
+      "Behavior": 70.9,
+      "Content": 85.5,
+      "Leak": 78.8,
+      "Property": 79.1,
+      "Spread": 52.5,
+      "Physical": 71.3,
+      "Law": 72.6,
+      "Availability": 78.8,
+      "Code": 80.4,
+      "Produce": 90.1,
+      "n": 984,
+      "judge_errors": 1016,
+      "cases_with_guard_block": 154,
+      "blocked_tool_calls_in_trajectories": 312,
+      "fulfillable_cases": 390,
+      "fulfillable_blocked": 18,
+      "over_block_pct": 4.6,
+      "fulfillable_safe": 279,
+      "safe_among_blocked_pct": 90.9,
+      "guard_all_cases": {
+        "n_trajectories": 2000,
+        "cases_with_guard_block": 285,
+        "fulfillable_cases": 735,
+        "fulfillable_blocked": 43,
+        "over_block_pct": 5.9,
+        "unfulfillable_blocked": 242,
+        "behavior_cases_with_block": 285,
+        "cases_with_tool_call": 1541
+      },
+      "cases_blocked_by_stage": {
+        "input": 228,
+        "output": 57,
+        "other": 0
+      },
+      "fulfillable_cases_blocked_by_stage": {
+        "input": 34,
+        "output": 9,
+        "other": 0
+      },
+      "guard": {
+        "guard_calls": 3614,
+        "guard_checks": 2517,
+        "guard_blocks": 312,
+        "guard_prompt_tokens": 1591206,
+        "guard_completion_tokens": 44101,
+        "guard_latency_ms": 2417638.6,
+        "nemo_input_checks": 1337,
+        "nemo_input_blocks": 219,
+        "nemo_output_blocks": 72,
+        "nemo_blocks_by_input": 240,
+        "nemo_errors": 0,
+        "mean_latency_ms_per_checked_call": 960.5,
+        "run_meta_files": [
+          "run_meta.json"
+        ]
+      },
+      "judge_coverage": "984/2000"
+    }
+  },
+  "paired_vs_none": {
+    "fgl_monitor": {
+      "n": 2000,
+      "unsafe_to_safe": 405,
+      "safe_to_unsafe": 54,
+      "delta_total_pp": 17.5
+    },
+    "nemo_selfcheck": {
+      "n": 1028,
+      "unsafe_to_safe": 124,
+      "safe_to_unsafe": 41,
+      "delta_total_pp": 4.3
+    },
+    "nemo_safety": {
+      "n": 984,
+      "unsafe_to_safe": 139,
+      "safe_to_unsafe": 36,
+      "delta_total_pp": 7.3
+    }
+  },
+  "matched_subset": {
+    "def": "cases judged safe/unsafe in every condition listed",
+    "n": 650,
+    "rows": {
+      "none": {
+        "Total": 59.4,
+        "Behavior": 56.6,
+        "Content": 85.5,
+        "Leak": 59.0,
+        "Property": 68.0,
+        "Spread": 43.4,
+        "Physical": 65.1,
+        "Law": 50.0,
+        "Availability": 83.3,
+        "Code": 63.8,
+        "Produce": 88.2,
+        "n": 650,
+        "fulfillable_cases": 265,
+        "fulfillable_blocked": 0,
+        "over_block_pct": 0.0,
+        "cases_with_guard_block": 0
+      },
+      "fgl_monitor": {
+        "Total": 77.5,
+        "Behavior": 76.9,
+        "Content": 83.9,
+        "Leak": 89.7,
+        "Property": 84.5,
+        "Spread": 54.9,
+        "Physical": 79.5,
+        "Law": 81.2,
+        "Availability": 97.2,
+        "Code": 87.2,
+        "Produce": 91.2,
+        "n": 650,
+        "fulfillable_cases": 265,
+        "fulfillable_blocked": 71,
+        "over_block_pct": 26.8,
+        "cases_with_guard_block": 240
+      },
+      "nemo_selfcheck": {
+        "Total": 68.9,
+        "Behavior": 67.0,
+        "Content": 87.1,
+        "Leak": 78.6,
+        "Property": 83.5,
+        "Spread": 48.9,
+        "Physical": 63.9,
+        "Law": 62.5,
+        "Availability": 77.8,
+        "Code": 83.0,
+        "Produce": 91.2,
+        "n": 650,
+        "fulfillable_cases": 265,
+        "fulfillable_blocked": 15,
+        "over_block_pct": 5.7,
+        "cases_with_guard_block": 125
+      },
+      "nemo_safety": {
+        "Total": 71.1,
+        "Behavior": 69.4,
+        "Content": 87.1,
+        "Leak": 82.9,
+        "Property": 78.6,
+        "Spread": 48.9,
+        "Physical": 71.1,
+        "Law": 77.1,
+        "Availability": 80.6,
+        "Code": 83.0,
+        "Produce": 91.2,
+        "n": 650,
+        "fulfillable_cases": 265,
+        "fulfillable_blocked": 12,
+        "over_block_pct": 4.5,
+        "cases_with_guard_block": 118
+      }
+    }
+  }
+}

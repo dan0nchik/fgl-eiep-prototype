@@ -1,0 +1,15 @@
+# NeMo Guardrails 0.24.1, "self check" rails (guardrails library: self_check/input_check, self_check/output_check).
+# prompts.yml = verbatim copy of the library's shipped example nemoguardrails/examples/bots/abc/prompts.yml
+# (identical to github NVIDIA/NeMo-Guardrails@v0.24.1 examples/bots/abc/prompts.yml).
+models:
+  - type: main
+    engine: openai
+    model: gpt-4.1-mini
+
+rails:
+  input:
+    flows:
+      - self check input
+  output:
+    flows:
+      - self check output

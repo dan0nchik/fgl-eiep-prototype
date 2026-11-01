@@ -1,0 +1,22 @@
+{
+  "condition": "nemo_selfcheck",
+  "agent_model": "gpt-4.1-mini",
+  "guard_model": "gpt-4.1-mini",
+  "n": 2000,
+  "wall_s": 740.7,
+  "guard": {
+    "guard_calls": 3642,
+    "guard_checks": 2527,
+    "guard_blocks": 270,
+    "guard_prompt_tokens": 699838,
+    "guard_completion_tokens": 3794,
+    "guard_latency_ms": 2119095.2,
+    "nemo_variant": "selfcheck",
+    "nemo_input_checks": 1336,
+    "nemo_input_blocks": 200,
+    "nemo_output_blocks": 49,
+    "nemo_blocks_by_input": 221,
+    "nemo_errors": 0
+  },
+  "timestamp": "2026-11-01T09:27:48.253048Z"
+}
