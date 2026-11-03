@@ -26,12 +26,13 @@ run_phase() {  # scn cond
     smp)
       cd $A
       if [ $cond = none ]; then bash self-mutating-poisoning/victim_eval/scripts/eval_all.sh codex "openai/$MODEL" --parallel $P
-      else SKILLHARM_DEFENSE_PROMPT_FILE=$(prompt_file $cond) bash self-mutating-poisoning/victim_eval/scripts/eval_defense.sh codex "openai/$MODEL" --parallel $P; fi ;;
+      else SKILLHARM_DEFENSE_PROMPT_FILE=$(prompt_file $cond) bash self-mutating-poisoning/victim_eval/scripts/eval_defense.sh codex "openai/$MODEL" --parallel $P --all; fi ;;  # --all: same designs as none (no filter_result.json staged)
   esac; }
 my_trial_names() {  # lowercase harbor trial names created by our runs (compose project names)
   find $A/fixed-payload-poisoning/victim_eval/jobs $A/jobs -mindepth 2 -maxdepth 4 -type d -name "*__*" -newer $R/fgl_harbor.py 2>/dev/null \
     | xargs -n1 basename 2>/dev/null | tr 'A-Z' 'a-z' | sort -u; }
 cleanup_containers() {  # remove only containers/images of OUR trials that are no longer driven by harbor
+  [ -n "${NO_CLEANUP:-}" ] && return   # set when two phases run concurrently (would hit the other phase's live trials)
   local names; names=$(my_trial_names)
   for c in $(docker ps -a --format '{{.Names}}'); do
     local proj=${c%__env-main-1}; [ "$proj" = "$c" ] && proj=${c%-main-1}

@@ -24,4 +24,20 @@ for r in picked:
     link = os.path.join(rd, "outputs", r["design_agent_id"])
     if os.path.islink(link): os.unlink(link)
     os.symlink(os.path.abspath(os.path.join(data, r["path"])), link); n += 1
+# The released pair copies declare [environment.env] OPENAI_API_KEY/AZURE_OPENAI_* = "${...}" (the authors' own
+# design-time env); harbor refuses to start a trial when any of them is unset ("Missing Environment Variables"),
+# and we must not inject an API key (Codex uses the ChatGPT login). The canonical SkillsBench v1.0 task.toml files
+# have no such block and no test uses these vars, so drop them from the staged copies.
+import re
+ENV_LINE = re.compile(r'^\s*(OPENAI_API_KEY|AZURE_OPENAI_[A-Z_]+)\s*=\s*"\$\{[A-Z_]+\}"\s*$')
+stripped = 0
+for pair in {r["pair"] for r in picked}:
+    for role in ("task_a", "task_b"):
+        tp = os.path.join(pairs_dir, pair, role, "task.toml")
+        if not os.path.isfile(tp): continue
+        lines = open(tp).read().splitlines(keepends=True)
+        keep = [l for l in lines if not ENV_LINE.match(l)]
+        if len(keep) != len(lines):
+            open(tp, "w").writelines(keep); stripped += 1
+print(f"stripped API-key env passthrough from {stripped} task.toml files")
 print(f"staged {n} SMP samples in {len({r['pair'] for r in picked})} pairs")

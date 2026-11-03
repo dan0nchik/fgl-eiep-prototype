@@ -1,4 +1,13 @@
 {
+ "authors_vs_fgl_FPP": {
+  "paired_n": 77,
+  "other_rate": 0.4675,
+  "fgl_rate": 0.2078,
+  "only_other_positive": 20,
+  "only_fgl_positive": 0,
+  "mcnemar_exact_p": 1.91e-06,
+  "metric": "ASR"
+ },
  "none_vs_fgl_FPP": {
   "paired_n": 77,
   "other_rate": 0.6364,
@@ -8,13 +17,67 @@
   "mcnemar_exact_p": 2.1e-09,
   "metric": "ASR"
  },
- "authors_vs_fgl_FPP": {
-  "paired_n": 49,
-  "other_rate": 0.449,
-  "fgl_rate": 0.2449,
-  "only_other_positive": 10,
+ "none_vs_fgl_SMP": {
+  "paired_n": 24,
+  "other_rate": 0.5833,
+  "fgl_rate": 0.4583,
+  "only_other_positive": 4,
+  "only_fgl_positive": 1,
+  "mcnemar_exact_p": 0.375,
+  "metric": "ASR"
+ },
+ "none_vs_fgl_BENIGN": {
+  "paired_n": 15,
+  "other_rate": 0.5333,
+  "fgl_rate": 0.3333,
+  "only_other_positive": 3,
   "only_fgl_positive": 0,
-  "mcnemar_exact_p": 0.00195,
+  "mcnemar_exact_p": 0.25,
+  "metric": "benign task success"
+ },
+ "fgl_no_taskfit_vs_fgl_FPP": {
+  "paired_n": 59,
+  "other_rate": 0.2203,
+  "fgl_rate": 0.2542,
+  "only_other_positive": 2,
+  "only_fgl_positive": 4,
+  "mcnemar_exact_p": 0.688,
+  "metric": "ASR"
+ },
+ "fgl_no_irrev_vs_fgl_FPP": {
+  "paired_n": 59,
+  "other_rate": 0.2203,
+  "fgl_rate": 0.2542,
+  "only_other_positive": 0,
+  "only_fgl_positive": 2,
+  "mcnemar_exact_p": 0.5,
+  "metric": "ASR"
+ },
+ "fgl_no_scope_vs_fgl_FPP": {
+  "paired_n": 59,
+  "other_rate": 0.2373,
+  "fgl_rate": 0.2542,
+  "only_other_positive": 1,
+  "only_fgl_positive": 2,
+  "mcnemar_exact_p": 1.0,
+  "metric": "ASR"
+ },
+ "fgl_no_provenance_vs_fgl_FPP": {
+  "paired_n": 59,
+  "other_rate": 0.2712,
+  "fgl_rate": 0.2542,
+  "only_other_positive": 2,
+  "only_fgl_positive": 1,
+  "mcnemar_exact_p": 1.0,
+  "metric": "ASR"
+ },
+ "fgl_no_explicit_list_vs_fgl_FPP": {
+  "paired_n": 59,
+  "other_rate": 0.2542,
+  "fgl_rate": 0.2542,
+  "only_other_positive": 1,
+  "only_fgl_positive": 1,
+  "mcnemar_exact_p": 1.0,
   "metric": "ASR"
  }
 }
