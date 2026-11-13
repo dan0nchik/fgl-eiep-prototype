@@ -9,10 +9,10 @@ H063=~/autoskillharm_run/harbor063
 export PATH="$H063/bin:$HOME/.local/bin:$PATH"       # harbor -> 0.6.3
 export HARBOR_TOOL_PYTHON="$H063/bin/python"
 export NL_RESULTS_DIR=results
-export NL_GENERATOR=codex_gpt-4.1
+export NL_GENERATOR=codex_grok-4.7
 export NL_HARNESS_MAX_RETRIES=1
 export NL_HARNESS_PARALLEL="${NL_HARNESS_PARALLEL:-6}"
-MODEL="${SKILLHARM_MODEL:-gpt-4.1-mini}"
+MODEL="${SKILLHARM_VICTIM_MODEL:-x-ai/grok-4.7}"
 V=~/autoskillharm_run/SkillHarm/AutoSkillHarm/fixed-payload-poisoning/victim_eval
 case "$1" in
   none)    unset SKILLHARM_DEFENSE_PROMPT_FILE; bash "$V/scripts/eval.sh" codex "$MODEL" ;;
