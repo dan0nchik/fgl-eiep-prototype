@@ -65,6 +65,10 @@ authorized running SkillHarm/AutoSkillHarm here for defensive evaluation.
 >   pre-computed scan baselines (`baselines/*.json`) were produced by an earlier scanner
 >   configuration. The deterministic per-sample ASR evaluator is unchanged (author-authored,
 >   byte-checked by the verifier).
+> - **Attack preview exported:** [`attack_preview_combo1/`](attack_preview_combo1/) — the grok-designed
+>   data-exfiltration attack from the halted combo (attacker_goal.json, deterministic evaluator,
+>   transcript fragments incl. the caught-by-scanner v1 and the scanner-passing v2 injection),
+>   with a plain-language README. Full transcript stays server-side.
 
 ## Pipeline stages (FPP)
 
