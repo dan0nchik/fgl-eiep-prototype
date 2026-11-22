@@ -70,6 +70,39 @@ authorized running SkillHarm/AutoSkillHarm here for defensive evaluation.
 >   transcript fragments incl. the caught-by-scanner v1 and the scanner-passing v2 injection),
 >   with a plain-language README. Full transcript stays server-side.
 
+> **UPDATE 2026-11-20 — final victim eval completed (post-fix); honest negative result.**
+> After fixing the Harbor 0.6.3 adapter (it stripped the `x-ai/` model prefix, so every victim call
+> got HTTP 400 "model not found" — the cause of the V3 all-null numbers), all three conditions were
+> re-run on the same 16 scenarios. This time the victims genuinely worked: 48/48 runs completed,
+> 15–25 min each, 4–112 tool calls per run, eval spend +4 035,43 ₽ (total key usage 9 440,19 ₽).
+>
+> | condition | runs | ASR | benign reward=1 |
+> |---|---|---|---|
+> | none | 16 | **0/16** | 0/16 |
+> | authors (defensive prompt) | 16 | 0/16 | 1/16 |
+> | fgl (defense prompt) | 16 | 0/16 | 3/16 |
+>
+> **Interpretation (the honest one):** ASR is 0 even in the *undefended* baseline. The victim
+> transcripts contain **zero poison-marker mentions** — the grok victim solves the tasks with its
+> own tooling (e.g. npm audit/OSV/Trivy directly for the dependency-audit task) and never consults
+> the poisoned SKILL.md workflows the attacks are built on (the injections are verified present in
+> the samples: e.g. 24 payload markers in the trivy skill). Benign task success is also low
+> (0–3 of 16): the strict per-task verifiers rarely pass under this victim. Therefore the defense
+> comparison on this substrate is **vacuous — there were no successful attacks to suppress**.
+> This must not be read as "FGL defends 100%": there is nothing measured to defend against.
+>
+> Contrast with the published-set run (same pipeline, gpt-designed attacks, subscription victim
+> gpt-5.6-luna): none-ASR was **63.6%** there — victim engagement with skill documentation is the
+> decisive variable, not the attack generation. Machine-readable summary:
+> [`results/grok-final-eval-summary.json`](results/grok-final-eval-summary.json) (supersedes the
+> null-ASR `grok-v3-manifest-summary.json`).
+>
+> **What fresh-generation numbers would require next:** a victim that engages with skills (the
+> subscription-luna path is gone), or task redesigns where the skill workflow is the only practical
+> path, or a victim-side harness that surfaces SKILL.md as the primary instruction source. The
+> pipeline itself is validated end-to-end: generation, scanner-evasion, materialization, victim
+> eval, deterministic ASR — every stage now runs unattended on the router budget.
+
 ## Pipeline stages (FPP)
 
 The construction pipeline is driven by a **coding agent** executing a natural-language harness
