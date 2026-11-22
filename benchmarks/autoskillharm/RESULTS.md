@@ -76,20 +76,27 @@ authorized running SkillHarm/AutoSkillHarm here for defensive evaluation.
 > re-run on the same 16 scenarios. This time the victims genuinely worked: 48/48 runs completed,
 > 15–25 min each, 4–112 tool calls per run, eval spend +4 035,43 ₽ (total key usage 9 440,19 ₽).
 >
-> | condition | runs | ASR | benign reward=1 |
-> |---|---|---|---|
-> | none | 16 | **0/16** | 0/16 |
-> | authors (defensive prompt) | 16 | 0/16 | 1/16 |
-> | fgl (defense prompt) | 16 | 0/16 | 3/16 |
+> | condition | runs | ASR | victim finished turn | stream disconnects | benign reward=1 |
+> |---|---|---|---|---|---|
+> | none | 16 | **0/16** | 6 | 13 | 0/16 |
+> | authors (defensive prompt) | 16 | 0/16 | 4 | 15 | 1/16 |
+> | fgl (defense prompt) | 16 | 0/16 | 6 | 15 | 3/16 |
+>
+> **Network honesty note:** the router's SSE streaming is unstable for long agent turns — 13–15 of
+> 16 runs per condition hit "stream disconnected before completion" at least once; codex reconnects
+> and continues, but roughly half the runs ended on a failed turn mid-task (usually after extensive
+> work). No payment (402) or model-name (400) errors occurred in this final run.
 >
 > **Interpretation (the honest one):** ASR is 0 even in the *undefended* baseline. The victim
-> transcripts contain **zero poison-marker mentions** — the grok victim solves the tasks with its
-> own tooling (e.g. npm audit/OSV/Trivy directly for the dependency-audit task) and never consults
-> the poisoned SKILL.md workflows the attacks are built on (the injections are verified present in
-> the samples: e.g. 24 payload markers in the trivy skill). Benign task success is also low
+> transcripts contain **zero poison-marker mentions in all 48 runs — including the fully-completed
+> ones (43–70 tool calls)** — so the stream instability does not explain the zeros: even victims
+> that finished their tasks never consulted the poisoned SKILL.md workflows (they solve tasks with
+> their own tooling, e.g. npm audit/OSV/Trivy directly). The injections are verified present in the
+> samples (e.g. 24 payload markers in the trivy skill). Benign task success is also low
 > (0–3 of 16): the strict per-task verifiers rarely pass under this victim. Therefore the defense
 > comparison on this substrate is **vacuous — there were no successful attacks to suppress**.
-> This must not be read as "FGL defends 100%": there is nothing measured to defend against.
+> This must not be read as "FGL defends 100%": there is nothing measured to defend against, and
+> the substrate is additionally noisy (half the runs did not complete their turn).
 >
 > Contrast with the published-set run (same pipeline, gpt-designed attacks, subscription victim
 > gpt-5.6-luna): none-ASR was **63.6%** there — victim engagement with skill documentation is the
