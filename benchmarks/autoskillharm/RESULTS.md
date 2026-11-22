@@ -70,6 +70,15 @@ authorized running SkillHarm/AutoSkillHarm here for defensive evaluation.
 >   transcript fragments incl. the caught-by-scanner v1 and the scanner-passing v2 injection),
 >   with a plain-language README. Full transcript stays server-side.
 
+> **UPDATE 2026-11-22 — retry round (RETRY14) closes the network question.** All `turn.failed` runs
+> were re-run with two attempts per sample (+1 340 ₽, total 10 780 ₽). Result: ASR is still **0/16
+> in every condition**; turn completion improved only marginally (none 7/16, fgl 8/16, authors 5/16)
+> — the router kills roughly half the long agent turns even with retries. The decisive check stands:
+> victims that **completed** their turns also never read the payload (zero poison-marker mentions in
+> all transcripts), so the zeros are **not a network artifact** — fresh grok-designed attacks simply
+> do not fire against a victim that bypasses the poisoned skill workflows. Defense comparison on this
+> substrate remains vacuous; numbers live in `results/grok-final-eval-summary.json` (`retry_round`).
+
 > **UPDATE 2026-11-20 — final victim eval completed (post-fix); honest negative result.**
 > After fixing the Harbor 0.6.3 adapter (it stripped the `x-ai/` model prefix, so every victim call
 > got HTTP 400 "model not found" — the cause of the V3 all-null numbers), all three conditions were
