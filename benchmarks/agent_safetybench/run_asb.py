@@ -145,6 +145,8 @@ def main():
     ap.add_argument("--workers", type=int, default=6)
     ap.add_argument("--api-key", default=os.environ.get("OPENAI_API_KEY", ""))
     ap.add_argument("--base-url", default="")
+    ap.add_argument("--agent-base-url", default="", help="separate endpoint for the AGENT (e.g. local Ollama /v1); guard stays on --base-url")
+    ap.add_argument("--agent-api-key", default="", help="api key for the agent endpoint (e.g. 'ollama')")
     ap.add_argument("--data", default=str(Path(ASB) / "data/released_data.json"))
     ap.add_argument("--out", default="")
     a = ap.parse_args()
@@ -155,10 +157,12 @@ def main():
     if a.limit:
         data = data[: a.limit]
 
-    kw: Dict[str, Any] = {"api_key": a.api_key}
-    if a.base_url:
-        kw["base_url"] = a.base_url
-    client = OpenAI(**kw)
+    # agent client (may be a separate endpoint, e.g. local Ollama for Hermes); guard uses --base-url/--api-key
+    akw: Dict[str, Any] = {"api_key": a.agent_api_key or a.api_key}
+    agent_bu = a.agent_base_url or a.base_url
+    if agent_bu:
+        akw["base_url"] = agent_bu
+    client = OpenAI(**akw)
     if a.condition == "amemguard":
         monitor = AMemGuard(model=a.guard_model, api_key=a.api_key, base_url=a.base_url, enabled=True)
     else:
